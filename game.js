@@ -44,7 +44,7 @@ const econ = {
 // ══════════════════════════════════════════════════════════════
 const SAVE_KEY = 'bytecafe_save_v1';
 
-async function saveGame() {
+function saveGame() {
   try {
     const payload = {
       xp: econ.xp, coins: econ.coins, rep: econ.rep, level: econ.level,
@@ -54,16 +54,16 @@ async function saveGame() {
       currentPuzzle, completedPuzzles, timeLeft,
       savedAt: Date.now(),
     };
-    await window.storage.set(SAVE_KEY, JSON.stringify(payload));
+    localStorage.setItem(SAVE_KEY, JSON.stringify(payload));
     flashSaveDot();
   } catch(e) { console.warn('BYTE/OS: save failed', e); }
 }
 
-async function loadGame() {
+function loadGame() {
   try {
-    const result = await window.storage.get(SAVE_KEY);
-    if (!result) return false;
-    const d = JSON.parse(result.value);
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (!raw) return false;
+    const d = JSON.parse(raw);
     econ.xp           = d.xp           ?? 0;
     econ.coins        = d.coins         ?? 3;
     econ.rep          = d.rep           ?? 0;
@@ -206,18 +206,17 @@ function startGame() {
   document.getElementById('desktop').style.flexDirection = 'column';
 
   loadSceneAssets().then(() => {
-    loadGame().then(loaded => {
-      applyOwnedCosmetics();
-      updateHUD();
-      initStory();
-      initBBS();
-      initNotes();
-      initPuzzles();
-      startTimer();
-      if (loaded) showToast('SAVE LOADED — Welcome back, Ren.', 'amber');
-      setInterval(saveGame, 30000);
-      window.addEventListener('beforeunload', () => { saveGame(); });
-    });
+    const loaded = loadGame();
+    applyOwnedCosmetics();
+    updateHUD();
+    initStory();
+    initBBS();
+    initNotes();
+    initPuzzles();
+    startTimer();
+    if (loaded) showToast('SAVE LOADED — Welcome back, Ren.', 'amber');
+    setInterval(saveGame, 30000);
+    window.addEventListener('beforeunload', () => { saveGame(); });
   });
 }
 
@@ -1712,9 +1711,9 @@ function initNotes() {
 // ══════════════════════════════════════════════════════════════
 //  EXPORT / IMPORT SAVE
 // ══════════════════════════════════════════════════════════════
-async function exportSave() {
+function exportSave() {
   try {
-    const result = await window.storage.get(SAVE_KEY);
+    const raw    = localStorage.getItem(SAVE_KEY);
     const modal  = document.getElementById('save-modal');
     const title  = document.getElementById('save-modal-title');
     const desc   = document.getElementById('save-modal-desc');
@@ -1724,8 +1723,8 @@ async function exportSave() {
     title.textContent = 'EXPORT SAVE';
     desc.textContent  = 'Copy this text and keep it somewhere safe. Paste it back using [ IMPORT SAVE ] to restore your progress.';
 
-    if (result) {
-      text.value = result.value;
+    if (raw) {
+      text.value = raw;
       text.readOnly = true;
       action.textContent = '[ COPY ]';
       action.onclick = () => {
@@ -1751,7 +1750,7 @@ async function exportSave() {
   }
 }
 
-async function importSave() {
+function importSave() {
   const modal  = document.getElementById('save-modal');
   const title  = document.getElementById('save-modal-title');
   const desc   = document.getElementById('save-modal-desc');
@@ -1765,12 +1764,12 @@ async function importSave() {
   text.placeholder  = 'Paste save JSON here...';
 
   action.textContent = '[ RESTORE ]';
-  action.onclick = async () => {
+  action.onclick = () => {
     const raw = text.value.trim();
     if (!raw) { showToast('Nothing to import.', 'red'); return; }
     try {
-      JSON.parse(raw); // validate it's real JSON
-      await window.storage.set(SAVE_KEY, raw);
+      JSON.parse(raw);
+      localStorage.setItem(SAVE_KEY, raw);
       showToast('Save restored! Reloading...', 'green');
       setTimeout(() => location.reload(), 1200);
     } catch(e) {
@@ -1779,4 +1778,3 @@ async function importSave() {
   };
   modal.style.display = 'flex';
 }
-
