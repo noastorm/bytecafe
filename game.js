@@ -655,6 +655,134 @@ const puzzles = [
     },
     successMsg: '✓ PERFECT! Mapping color=drv inside aes() gives a categorical colour scale automatically. This is the ggplot2 grammar!',
   },
+  {
+    id: 'p11', title: 'PUZZLE 11 — SWITCH STATEMENT',
+    desc: 'Create a variable <code>year_of_study <- 2</code>, then use <code>switch()</code> to print "Freshperson", "Experienced", "Very Experienced", or "Ready to graduate" based on the value.',
+    hint: 'switch(year_of_study, print("Freshperson"), print("Experienced"), print("Very Experienced"), print("Ready to graduate"))',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>From your practice sheet!<br><code style="color:var(--amber-bright)">switch(year_of_study,<br>  print("Freshperson"),<br>  print("Experienced"),<br>  print("Very Experienced"),<br>  print("Ready to graduate"))</code><br><br>switch() picks by position — value 1 → first option, value 2 → second, etc.</div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasSwitch = /switch\s*\(/.test(allCode);
+      const hasYear = /year_of_study\s*<-\s*2/.test(allCode);
+      const hasOutput = outputs.some(o => o.includes('Experienced'));
+      return hasSwitch && hasYear && hasOutput;
+    },
+    successMsg: '✓ CORRECT! switch() is cleaner than chained if/else when selecting from a fixed set of options.',
+  },
+  {
+    id: 'p12', title: 'PUZZLE 12 — PASTE0 & STRINGS',
+    desc: 'Create variables <code>name <- "Ren"</code> and <code>score <- 95</code>. Use <code>paste0()</code> to print: <code>Ren scored 95</code>',
+    hint: 'name <- "Ren"; score <- 95; print(paste0(name, " scored ", score))',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br><code style="color:var(--amber-bright)">paste0()</code> joins strings with no separator:<br><code style="color:var(--amber-bright)">paste0("Hello", " ", "World")</code><br>→ "Hello World"<br><br>Mix variables and strings freely:<br><code style="color:var(--amber-bright)">paste0(name, " scored ", score)</code></div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasPaste = /paste0\s*\(/.test(allCode);
+      const hasName = /name\s*<-\s*["']Ren["']/.test(allCode);
+      const hasOutput = outputs.some(o => o.includes('Ren') && o.includes('95'));
+      return hasPaste && hasName && hasOutput;
+    },
+    successMsg: '✓ CORRECT! paste0() is your go-to for building strings from variables. Used constantly in R output.',
+  },
+  {
+    id: 'p13', title: 'PUZZLE 13 — RBIND & CBIND',
+    desc: 'Create two vectors: <code>r1 <- c(1,2,3)</code> and <code>r2 <- c(4,5,6)</code>. Combine them into a matrix using <code>rbind()</code>, then print it.',
+    hint: 'r1 <- c(1,2,3); r2 <- c(4,5,6); m <- rbind(r1, r2); print(m)',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>From your matrices sheet!<br><code style="color:var(--amber-bright)">rbind(r1, r2)</code> — stacks rows<br><code style="color:var(--amber-bright)">cbind(c1, c2)</code> — stacks columns<br><br>Result of rbind:<br><code style="color:var(--amber-bright)">   [,1] [,2] [,3]<br>r1    1    2    3<br>r2    4    5    6</code></div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasRbind = /rbind\s*\(/.test(allCode);
+      const hasVecs = /r1\s*<-\s*c\(/.test(allCode) && /r2\s*<-\s*c\(/.test(allCode);
+      const hasOutput = outputs.some(o => o.includes('[,1]') || o.includes('r1') || o.includes('1    2    3'));
+      return hasRbind && hasVecs && hasOutput;
+    },
+    successMsg: '✓ CORRECT! rbind() builds matrices row by row. cbind() does it column by column. Both essential.',
+  },
+  {
+    id: 'p14', title: 'PUZZLE 14 — MATRIX OPERATIONS',
+    desc: 'Create matrix <code>m <- matrix(1:4, nrow=2, ncol=2)</code>. Then print its transpose with <code>t(m)</code> and check its inverse with <code>solve(m)</code>.',
+    hint: 'm <- matrix(1:4, nrow=2, ncol=2); t(m); solve(m)',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>Matrix operations from your sheet:<br><code style="color:var(--amber-bright)">t(m)</code> — transpose (flip rows/cols)<br><code style="color:var(--amber-bright)">solve(m)</code> — matrix inverse<br><code style="color:var(--amber-bright)">m1 %*% m2</code> — matrix multiply<br><br>Note: solve() only works on square matrices. A matrix times its inverse = identity matrix.</div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasMat = /matrix\s*\(1:4/.test(allCode);
+      const hasT = /\bt\s*\(\s*m\s*\)/.test(allCode);
+      const hasSolve = /solve\s*\(\s*m\s*\)/.test(allCode);
+      return hasMat && hasT && hasSolve;
+    },
+    successMsg: '✓ CORRECT! t() and solve() are standard matrix tools. You\'ll see these in linear algebra and stats.',
+  },
+  {
+    id: 'p15', title: 'PUZZLE 15 — DATA FRAME FILTERING',
+    desc: 'Create the kids data frame: Name=c("Alice","Bob","Carol"), Age=c(15,12,5). Then filter it to show only kids older than 10: <code>kids[kids$Age > 10, ]</code>',
+    hint: 'kids <- data.frame(Name=c("Alice","Bob","Carol"), Age=c(15,12,5)); kids[kids$Age > 10, ]',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>Filter a data frame with a condition:<br><code style="color:var(--amber-bright)">df[df$column > value, ]</code><br><br>The comma after the condition is required — it means "all columns".<br><br>So <code style="color:var(--amber-bright)">kids[kids$Age > 10, ]</code> returns rows where Age > 10, keeping all columns.</div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasDf = /data\.frame\s*\(/.test(allCode);
+      const hasFilter = /kids\s*\[\s*kids\s*\$\s*Age/.test(allCode);
+      const hasOutput = outputs.some(o => o.includes('Alice') || o.includes('Bob'));
+      return hasDf && hasFilter && hasOutput;
+    },
+    successMsg: '✓ CORRECT! df[condition, ] is the core filtering pattern in R. The comma means "keep all columns".',
+  },
+  {
+    id: 'p16', title: 'PUZZLE 16 — MERGE DATA FRAMES',
+    desc: 'Create two data frames: <code>kids1</code> with Name+Age and <code>kids2</code> with Name+Height. Merge them by Name using <code>merge(kids1, kids2, by="Name")</code>.',
+    hint: 'kids1 <- data.frame(Name=c("Alice","Bob"), Age=c(15,12)); kids2 <- data.frame(Name=c("Alice","Bob"), Height=c(162,148)); merge(kids1, kids2, by="Name")',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>From your data frames sheet!<br><code style="color:var(--amber-bright)">merge(df1, df2, by="Name")</code><br><br>This is an inner join — only rows with matching Name in BOTH frames are kept.<br><br>If column names differ:<br><code style="color:var(--amber-bright)">merge(df1, df2,<br>  by.x="Name",<br>  by.y="Student")</code></div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasMerge = /merge\s*\(/.test(allCode);
+      const hasBoth = /kids1/.test(allCode) && /kids2/.test(allCode);
+      const hasBy = /by\s*=/.test(allCode);
+      return hasMerge && hasBoth && hasBy;
+    },
+    successMsg: '✓ CORRECT! merge() is how you join tables in R — essential for real data work. Dougie needed this.',
+  },
+  {
+    id: 'p17', title: 'PUZZLE 17 — GGPLOT GEOM_LINE & LAYERS',
+    desc: 'Using the ggplot practice sheet pattern: create <code>xdat <- c(1:12)</code> and <code>ydat <- xdat^2</code>. Plot a line graph with <code>geom_line()</code>.',
+    hint: 'xdat <- c(1:12); ydat <- xdat^2; print(ggplot(data=NULL) + geom_line(aes(x=xdat, y=ydat)))',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>From your ggplot sheet!<br><code style="color:var(--amber-bright)">ggplot(data=NULL) +<br>  geom_line(aes(x=xdat, y=ydat))</code><br><br>Key geom types:<br><code style="color:var(--amber-bright)">geom_point()</code> — scatter<br><code style="color:var(--amber-bright)">geom_line()</code> — line chart<br><code style="color:var(--amber-bright)">geom_bar()</code> — bar chart<br><code style="color:var(--amber-bright)">geom_histogram()</code> — histogram</div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasLine = /geom_line\s*\(/.test(allCode);
+      const hasAes = /aes\s*\(/.test(allCode);
+      const hasData = /xdat/.test(allCode) && /ydat/.test(allCode);
+      return hasLine && hasAes && hasData;
+    },
+    successMsg: '✓ CORRECT! geom_line() is the line chart layer. Swap it for geom_point() for scatter, geom_bar() for bars.',
+  },
+  {
+    id: 'p18', title: 'PUZZLE 18 — GGPLOT HISTOGRAM & FACETS',
+    desc: 'Write a ggplot histogram of engine displacement from the <code>mpg</code> dataset. Then add <code>facet_grid(year~.)</code> to split by year.',
+    hint: 'ggplot(mpg) + geom_histogram(aes(x=displ), color="blue", fill="lightblue") + facet_grid(year~.)',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>From your ggplot sheet!<br><code style="color:var(--amber-bright)">ggplot(mpg) +<br>  geom_histogram(<br>    aes(x=displ),<br>    color="blue",<br>    fill="lightblue") +<br>  facet_grid(year~.)</code><br><br><code style="color:var(--amber-bright)">facet_grid(var~.)</code> splits the plot into subplots — one per value of var. Very useful for comparing groups.</div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasHist = /geom_histogram\s*\(/.test(allCode);
+      const hasFacet = /facet_grid\s*\(/.test(allCode);
+      const hasMpg = /mpg/.test(allCode);
+      return hasHist && hasFacet && hasMpg;
+    },
+    successMsg: '✓ CORRECT! facet_grid() splits one plot into a grid of subplots by a variable. Powerful for comparison.',
+  },
+  {
+    id: 'p19', title: 'BONUS — THE CIRCLE FUNCTION',
+    desc: 'From your practice sheet: write the <code>circle()</code> function that takes xcord, ycord, radius, and nsamples=64, builds x and y vectors using a for loop and cos/sin, then calls plot().',
+    hint: 'circle <- function(xcord, ycord, radius, nsamples=64){ x<-c(); y<-c(); for(s in 1:nsamples){ x[s]<-radius*cos(2*pi*s/nsamples)+xcord; y[s]<-radius*sin(2*pi*s/nsamples)+ycord }; plot(x,y,asp=1) }',
+    bytosTip: `<div class="tip"><b>BYTOS TIP:</b><br>This is straight from your practice sheet — the full circle function:<br><code style="color:var(--amber-bright)">circle <- function(xcord, ycord,<br>  radius, nsamples=64){<br>  x <- c()<br>  y <- c()<br>  for(s in 1:nsamples){<br>    x[s] <- radius*cos(<br>      2*pi*s/nsamples)+xcord<br>    y[s] <- radius*sin(<br>      2*pi*s/nsamples)+ycord<br>  }<br>  plot(x, y, asp=1)<br>}</code><br><br>This tests: functions + default args + for loops + vectors + math.</div>`,
+    check: (code, outputs) => {
+      const allCode = code.join('');
+      const hasFunc = /circle\s*<-\s*function/.test(allCode);
+      const hasFor = /for\s*\(/.test(allCode);
+      const hasCos = /cos\s*\(/.test(allCode);
+      const hasSin = /sin\s*\(/.test(allCode);
+      const hasPlot = /plot\s*\(/.test(allCode);
+      return hasFunc && hasFor && hasCos && hasSin && hasPlot;
+    },
+    successMsg: '✓ PERFECT! The circle function combines everything: functions, default args, for loops, vectors, and math. This is real R.',
+  },
 ];
 
 // ══════════════════════════════════════════════════════════════
@@ -673,9 +801,9 @@ let wrongAttempts   = 0;
 let puzzleStartTime = Date.now();
 
 // Per-puzzle reward tables
-const PUZZLE_XP    = [30, 35, 40, 40, 55, 50, 50, 45, 60, 70];
-const PUZZLE_COINS = [ 0,  0,  0,  1,  0,  1,  0,  0,  1,  2];
-const PUZZLE_REP   = [ 1,  1,  1,  1,  2,  2,  2,  2,  2,  3];
+const PUZZLE_XP    = [30, 35, 40, 40, 55, 50, 50, 45, 60, 70, 50, 45, 55, 60, 55, 65, 60, 65, 80];
+const PUZZLE_COINS = [ 0,  0,  0,  1,  0,  1,  0,  0,  1,  2,  1,  0,  1,  1,  1,  2,  1,  2,  3];
+const PUZZLE_REP   = [ 1,  1,  1,  1,  2,  2,  2,  2,  2,  3,  2,  2,  2,  3,  2,  3,  2,  3,  4];
 
 const BYTOS_SUCCESS = [
   'Confirmed. You are smarter than a very clever pigeon.',
@@ -688,6 +816,15 @@ const BYTOS_SUCCESS = [
   "Wow okay you actually got that. I'm choosing to be proud.",
   "Correct! Please don't tell anyone I was helping you.",
   'Nice. Even Mr. K looked up from his crossword.',
+  'switch() mastered. Your code now has taste.',
+  'paste0() unlocked. You can now talk to R and it talks back.',
+  'rbind() and cbind(). The building blocks of matrices. Solid.',
+  't() and solve(). Linear algebra in two function calls. Respect.',
+  'Filtered like a pro. df[condition, ] is burned into your brain now.',
+  'merge() conquered. Dougie owes you a coffee. Several coffees.',
+  'geom_line() added to your arsenal. The grammar grows.',
+  'facet_grid() — the plot splits. You win.',
+  "BYTOS: ...That's the circle function. From the practice sheet. You actually did it. I'm not crying. You're crying.",
 ];
 
 const BYTOS_WRONG = [
@@ -703,16 +840,25 @@ const BYTOS_WRONG = [
 
 // Puzzle index → scene background key
 const PUZZLE_BG = [
-  'terminal_7', // 1 variables
-  'terminal_7', // 2 vectors
-  'terminal_7', // 3 if/else
-  'cafe_main',  // 4 for loop
-  'terminal_7', // 5 functions
-  'late_night', // 6 matrices
-  'late_night', // 7 data frames
-  'cafe_main',  // 8 while loop
-  'late_night', // 9 ggplot basics
+  'terminal_7', // 1  variables
+  'terminal_7', // 2  vectors
+  'terminal_7', // 3  if/else
+  'cafe_main',  // 4  for loop
+  'terminal_7', // 5  functions
+  'late_night', // 6  matrices
+  'late_night', // 7  data frames
+  'cafe_main',  // 8  while loop
+  'late_night', // 9  ggplot basics
   'late_night', // 10 ggplot layers
+  'terminal_7', // 11 switch
+  'terminal_7', // 12 paste0
+  'late_night', // 13 rbind/cbind
+  'late_night', // 14 matrix ops
+  'cafe_main',  // 15 df filtering
+  'late_night', // 16 merge
+  'terminal_7', // 17 geom_line
+  'late_night', // 18 histogram+facet
+  'cafe_main',  // 19 bonus circle
 ];
 
 function setConsoleBanner(idx) {
@@ -871,6 +1017,67 @@ function evalR(code) {
   // ggplot — just acknowledge
   if (/^(print\s*\()?ggplot\s*\(/.test(trimmed)) return '# ggplot2: plot rendered (visualization layer)';
   if (/^ggplot\s*\(/.test(trimmed)) return '# ggplot2: plot rendered (visualization layer)';
+
+  // switch statement
+  if (/^switch\s*\(/.test(trimmed)) {
+    if (/year_of_study/.test(allCode)) {
+      const yearMatch = allCode.match(/year_of_study\s*<-\s*(\d)/);
+      const yr = yearMatch ? parseInt(yearMatch[1]) : 1;
+      const opts = ['Freshperson','Experienced','Very Experienced','Ready to graduate'];
+      return '[1] "' + (opts[yr-1] || 'Freshperson') + '"';
+    }
+    return '[1] (switch result)';
+  }
+
+  // paste0
+  if (/paste0\s*\(/.test(trimmed)) {
+    if (/name/.test(allCode) && /score/.test(allCode)) return '[1] "Ren scored 95"';
+    const inner = trimmed.replace(/print\s*\(|paste0\s*\(|\)/g,'');
+    return '[1] "' + inner.replace(/['"]/g,'').replace(/,\s*/g,'') + '"';
+  }
+
+  // rbind / cbind
+  if (/rbind\s*\(/.test(trimmed)) {
+    return '   [,1] [,2] [,3]\nr1    1    2    3\nr2    4    5    6';
+  }
+  if (/cbind\s*\(/.test(trimmed)) {
+    return '     r1 r2\n[1,]  1  4\n[2,]  2  5\n[3,]  3  6';
+  }
+
+  // Transpose
+  if (/^t\s*\(\s*m\s*\)/.test(trimmed)) {
+    return '     [,1] [,2]\n[1,]    1    3\n[2,]    2    4';
+  }
+
+  // solve
+  if (/^solve\s*\(\s*m\s*\)/.test(trimmed)) {
+    return '     [,1] [,2]\n[1,]   -2  1.5\n[2,]    1 -0.5';
+  }
+
+  // matplot
+  if (/matplot\s*\(/.test(trimmed)) return '# matplot: multi-column plot rendered';
+
+  // Data frame filtering
+  if (/kids\s*\[\s*kids\s*\$\s*Age\s*>/.test(trimmed)) {
+    return '   Name Age\n1 Alice  15\n2   Bob  12';
+  }
+
+  // merge
+  if (/^merge\s*\(/.test(trimmed) || /merge\s*\(/.test(trimmed) && /<-/.test(trimmed)) {
+    return '   Name Age Height\n1 Alice  15    162\n2   Bob  12    148';
+  }
+
+  // geom_line, geom_bar, geom_histogram, facet_grid
+  if (/geom_line\s*\(/.test(trimmed) || /geom_bar\s*\(/.test(trimmed) ||
+      /geom_histogram\s*\(/.test(trimmed) || /facet_grid\s*\(/.test(trimmed)) {
+    return '# ggplot2: plot rendered (visualization layer)';
+  }
+
+  // plot() for circle function
+  if (/^plot\s*\(/.test(trimmed)) return '# base R plot rendered';
+
+  // circle function call
+  if (/^circle\s*\(/.test(trimmed)) return '# circle plot rendered';
 
   // print() general
   if (printMatch) {
@@ -1059,7 +1266,7 @@ function checkPuzzle() {
 function updateStoryProgress(idx) {
   const msgs = [
     null,
-    'Great! You learned variables. That\'s how you label and store data in R.',
+    'Great! Variables store values. The foundation of everything in R.',
     'Vectors! c() combines values. Most R data is vectors at heart.',
     'if/else! Conditional logic lets code make decisions.',
     'for loops! Iterate over sequences. Your circle function uses this.',
@@ -1068,7 +1275,16 @@ function updateStoryProgress(idx) {
     'Data frames! Tables of mixed data types. Your bread and butter.',
     'while loops! Condition-based repetition. Handle edge cases carefully!',
     'ggplot2 basics! The grammar of graphics — canvas, aesthetics, geom.',
-    'ggplot2 advanced! Multi-layer plots with colour mapping. You\'re done! 🎉',
+    'ggplot2 layers! Multi-layer plots with colour mapping.',
+    'switch()! Cleaner than chained if/else for fixed option sets.',
+    'paste0()! String building. You can now construct any output message.',
+    'rbind() and cbind()! Build matrices from vectors — two directions.',
+    'Matrix operations! Transpose, multiply, invert. Linear algebra unlocked.',
+    'Data frame filtering! df[condition, ] is the core query pattern.',
+    'merge()! Joining tables by a common column. Real data work.',
+    'geom_line()! Line charts. Another layer type in the ggplot grammar.',
+    'facet_grid()! Subplots by variable. The full ggplot toolkit.',
+    'The circle function! Functions + loops + vectors + math. You covered everything. 🎉',
   ];
   if (msgs[idx]) setBytosMsg(msgs[idx]);
 }
