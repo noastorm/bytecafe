@@ -1,0 +1,31 @@
+{
+  "lectureId": "molbio_w26_l14",
+  "reviewStatus": "reviewed",
+  "lectureSummary": "Pre-mRNA processing includes 5-prime capping, splicing, 3-prime cleavage, and polyadenylation, producing mature transcripts with different stability and translation potential.",
+  "keyConcepts": [
+    "5-prime capping",
+    "Splicing and alternative exon choice",
+    "3-prime cleavage",
+    "Polyadenylation"
+  ],
+  "vocabulary": ["capping", "splicing", "polyadenylation", "pre-mRNA", "mature mRNA"],
+  "processes": [
+    "Cap addition",
+    "Intron removal and exon ligation",
+    "3-prime end formation",
+    "Poly(A) tail addition"
+  ],
+  "compareContrast": [
+    "Constitutive splicing versus alternative splicing"
+  ],
+  "testableFacts": [
+    "Alternative splicing changes transcript isoforms without changing genomic DNA",
+    "Polyadenylation affects transcript stability and translation"
+  ],
+  "diagramCandidates": [
+    "Pre-mRNA processing strip with cap, introns, and poly(A) tail"
+  ],
+  "misconceptions": [
+    "Treating splicing as a DNA-level editing event"
+  ]
+}

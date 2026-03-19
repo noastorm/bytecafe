@@ -1,0 +1,14 @@
+{
+  "courseId": "course_id_here",
+  "title": "Course title here",
+  "lectures": [
+    {
+      "lectureId": "course_id_l01",
+      "title": "Lecture 1 title",
+      "instructor": "Instructor Name",
+      "date": "2026-01-01",
+      "sourcePdfPath": "C:/absolute/path/to/lecture-01.pdf",
+      "tags": ["lecture-slides"]
+    }
+  ]
+}

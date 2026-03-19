@@ -4,18 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BYTE/CAFÉ — Terminal Session</title>
-<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=VT323&family=Share+Tech+Mono&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="monitor-frame">
+  <div class="monitor-shell-deco monitor-shell-deco-left" aria-hidden="true"></div>
+  <div class="monitor-shell-deco monitor-shell-deco-right" aria-hidden="true"></div>
+  <div class="monitor-topbar" aria-hidden="true">
+    <div class="monitor-brandplate">BYTE/CAFÉ CRT-9</div>
+    <div class="monitor-statuslights">
+      <span class="status-led status-led-live"></span>
+      <span class="status-led"></span>
+      <span class="status-led"></span>
+    </div>
+  </div>
   <div class="screen" id="main-screen">
+    <div class="screen-noise" aria-hidden="true"></div>
+    <div class="screen-glowline screen-glowline-top" aria-hidden="true"></div>
+    <div class="screen-glowline screen-glowline-bottom" aria-hidden="true"></div>
 
     <!-- BOOT SCREEN -->
     <div id="boot-screen">
       <div class="boot-logo">BYTE/CAFÉ</div>
-      <div class="boot-sub">BYTE/OS v2.1 — TERMINAL SESSION</div>
+      <div class="boot-sub" id="boot-subtitle">BYTE/OS v2.1 — TERMINAL SESSION</div>
+      <div class="course-picker">
+        <label class="course-picker-label" for="course-select">COURSE MODULE</label>
+        <select id="course-select" class="course-picker-select"></select>
+        <div class="course-picker-desc" id="course-select-desc">Choose a ByteCafe course pack before booting.</div>
+      </div>
       <div class="boot-lines" id="boot-lines"></div>
       <button class="boot-btn" id="boot-btn" style="display:none" onclick="startGame()">[ INSERT COIN ]</button>
     </div>
@@ -79,11 +97,17 @@
           <div class="console-left">
             <div id="console-bg-banner" style="width:100%;height:90px;overflow:hidden;flex-shrink:0;border-bottom:1px solid var(--border);"></div>
             <div class="puzzle-header">
+              <div class="lecture-level-bar" id="lecture-level-bar" style="display:none">
+                <label class="lecture-level-label" for="lecture-select">LECTURE LEVEL</label>
+                <select id="lecture-select" class="lecture-level-select"></select>
+                <div class="lecture-level-meta" id="lecture-level-meta"></div>
+              </div>
               <div class="puzzle-title" id="puzzle-title">PUZZLE 1.1 — VARIABLES & ASSIGNMENT</div>
               <div class="puzzle-desc" id="puzzle-desc">Loading puzzle...</div>
               <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
             </div>
-            <div class="r-output" id="r-output" style="height:300px;max-height:300px;overflow-y:scroll;flex:none;">
+            <div id="study-widget-panel" class="study-widget-panel" style="display:none"></div>
+            <div class="r-output" id="r-output">
               <span class="r-line r-result" style="color:var(--text-dim)">R version 4.3.1 — BYTE/OS Edition</span>
               <span class="r-line r-result" style="color:var(--text-dim)">Type your R code below and press ENTER or [ RUN ] ─────────</span>
               <span class="r-line"> </span>
@@ -199,7 +223,20 @@
 
   </div><!-- /#main-screen -->
 </div><!-- /.monitor-frame -->
+<div class="monitor-stand" aria-hidden="true">
+  <div class="monitor-stand-neck"></div>
+  <div class="monitor-stand-base"></div>
+</div>
 
+<script src="js/core.js"></script>
+<script src="js/save.js"></script>
+<script src="js/course-packs.js"></script>
+<script src="js/generated-course-packs.js"></script>
+<script src="js/story-data.js"></script>
+<script src="js/puzzle-data.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/content.js"></script>
+<script src="js/shop.js"></script>
 <script src="game.js"></script>
 </body>
 </html>

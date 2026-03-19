@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Canonical splicing and lariat formation</title>
+  <desc id="desc">Simplified pre-mRNA showing 5-prime splice site, branchpoint, 3-prime region, intron lariat, and exon ligation.</desc>
+  <rect width="960" height="520" rx="26" fill="#08110f"/>
+  <rect x="24" y="24" width="912" height="472" rx="22" fill="#0d1b18" stroke="#2e5f56"/>
+  <text x="60" y="74" fill="#d8fff5" font-size="34" font-family="Verdana, Arial, sans-serif">Canonical Splicing</text>
+  <text x="60" y="108" fill="#7fd6c4" font-size="18" font-family="Verdana, Arial, sans-serif">Lecture 13 core path: recognition order, branchpoint A, lariat, exon ligation</text>
+
+  <rect x="92" y="208" width="140" height="64" rx="18" fill="#7fd6c4"/>
+  <text x="134" y="247" fill="#07201c" font-size="24" font-family="Verdana, Arial, sans-serif">Exon 1</text>
+  <rect x="720" y="208" width="140" height="64" rx="18" fill="#7fd6c4"/>
+  <text x="762" y="247" fill="#07201c" font-size="24" font-family="Verdana, Arial, sans-serif">Exon 2</text>
+
+  <line x1="232" y1="240" x2="720" y2="240" stroke="#d8fff5" stroke-width="10" stroke-linecap="round"/>
+  <text x="258" y="214" fill="#d8fff5" font-size="18" font-family="Verdana, Arial, sans-serif">intron</text>
+
+  <circle cx="310" cy="240" r="14" fill="#f5c96c"/>
+  <text x="286" y="278" fill="#f5c96c" font-size="16" font-family="Verdana, Arial, sans-serif">5′ splice site</text>
+  <circle cx="648" cy="240" r="14" fill="#f5c96c"/>
+  <text x="596" y="278" fill="#f5c96c" font-size="16" font-family="Verdana, Arial, sans-serif">3′ region</text>
+
+  <circle cx="486" cy="156" r="18" fill="#ff9678"/>
+  <text x="452" y="120" fill="#ff9678" font-size="17" font-family="Verdana, Arial, sans-serif">branchpoint A</text>
+  <path d="M310 240 C366 154, 440 132, 486 156" fill="none" stroke="#ff9678" stroke-width="6" stroke-linecap="round"/>
+  <path d="M486 156 C542 140, 616 160, 648 240" fill="none" stroke="#ff9678" stroke-width="6" stroke-linecap="round"/>
+
+  <path d="M310 344 C392 308, 566 308, 648 344 C598 412, 360 412, 310 344 Z" fill="#102522" stroke="#7fd6c4" stroke-width="5"/>
+  <text x="418" y="363" fill="#d8fff5" font-size="22" font-family="Verdana, Arial, sans-serif">lariat intron</text>
+
+  <path d="M204 420 H748" stroke="#7fd6c4" stroke-width="10" stroke-linecap="round"/>
+  <text x="334" y="458" fill="#7fd6c4" font-size="20" font-family="Verdana, Arial, sans-serif">mature mRNA after exon ligation</text>
+
+  <g font-family="Verdana, Arial, sans-serif" font-size="16">
+    <rect x="78" y="310" width="228" height="94" rx="14" fill="#102522" stroke="#24413d"/>
+    <text x="96" y="338" fill="#d8fff5">1. U1 recognizes the 5′ splice site</text>
+    <text x="96" y="364" fill="#d8fff5">2. U2 recognizes branchpoint A</text>
+    <text x="96" y="390" fill="#d8fff5">3. U2AF helps define the 3′ region</text>
+
+    <rect x="646" y="310" width="228" height="94" rx="14" fill="#102522" stroke="#24413d"/>
+    <text x="664" y="338" fill="#d8fff5">4. U5 aligns exons</text>
+    <text x="664" y="364" fill="#d8fff5">5. U6 drives catalytic rearrangement</text>
+    <text x="664" y="390" fill="#d8fff5">6. Introns leave, exons stay</text>
+  </g>
+</svg>

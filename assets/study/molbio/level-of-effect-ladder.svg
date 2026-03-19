@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Levels of effect ladder</title>
+  <desc id="desc">A study ladder separating DNA-level changes, pre-mRNA processing, mature mRNA output, and protein consequences.</desc>
+  <rect width="960" height="520" rx="26" fill="#08110f"/>
+  <rect x="24" y="24" width="912" height="472" rx="22" fill="#0d1b18" stroke="#2e5f56"/>
+  <text x="60" y="74" fill="#d8fff5" font-size="34" font-family="Verdana, Arial, sans-serif">Level of Effect Ladder</text>
+  <text x="60" y="108" fill="#7fd6c4" font-size="18" font-family="Verdana, Arial, sans-serif">Do not answer a transcript question like it was a DNA question</text>
+
+  <g font-family="Verdana, Arial, sans-serif">
+    <rect x="90" y="146" width="780" height="72" rx="18" fill="#102522" stroke="#4f978b"/>
+    <text x="126" y="188" fill="#d8fff5" font-size="26">1. DNA level</text>
+    <text x="356" y="188" fill="#7fd6c4" font-size="18">promoter sequence, exon sequence, mutation in the gene itself</text>
+
+    <rect x="90" y="236" width="780" height="72" rx="18" fill="#12201d" stroke="#7fd6c4"/>
+    <text x="126" y="278" fill="#d8fff5" font-size="26">2. pre-mRNA processing</text>
+    <text x="396" y="278" fill="#7fd6c4" font-size="18">splice-site choice, branchpoint use, exon inclusion or skipping</text>
+
+    <rect x="90" y="326" width="780" height="72" rx="18" fill="#102522" stroke="#4f978b"/>
+    <text x="126" y="368" fill="#d8fff5" font-size="26">3. mature mRNA output</text>
+    <text x="400" y="368" fill="#7fd6c4" font-size="18">which isoform exists, what UTRs remain, what transcript is stable</text>
+
+    <rect x="90" y="416" width="780" height="72" rx="18" fill="#12201d" stroke="#7fd6c4"/>
+    <text x="126" y="458" fill="#d8fff5" font-size="26">4. protein consequence</text>
+    <text x="402" y="458" fill="#7fd6c4" font-size="18">activity, localization, secreted vs membrane-bound, developmental outcome</text>
+  </g>
+
+  <path d="M52 182 H84 M52 272 H84 M52 362 H84 M52 452 H84" stroke="#f5c96c" stroke-width="6" stroke-linecap="round"/>
+</svg>

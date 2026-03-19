@@ -1,0 +1,1928 @@
+{
+  "id": "molbio-w26",
+  "title": "Advanced Molecular Biology",
+  "shortLabel": "BIOL 3130 / 3155",
+  "description": "A chapter-based ByteCafe midterm campaign for Lectures 12-22, starting with RNA-binding proteins, splicing, and alternative splicing.",
+  "consoleButtonLabel": "STUDY CONSOLE",
+  "notesTitle": "NOTES - MIDTERM ARC",
+  "consoleTitle": "STUDY CONSOLE - MIDTERM ARC",
+  "storyTitle": "STORY - BYTE/CAFE EXAM SPRINT",
+  "storyMode": "chapter",
+  "themeClass": "course-molbio",
+  "runtime": {
+    "openingSceneId": "midterm_opening",
+    "masteryLabels": {
+      "methods": "methods and evidence",
+      "rbp_logic": "RNA-binding protein logic",
+      "splice_mechanism": "spliceosome mechanism",
+      "self_splicing": "Group I vs Group II",
+      "level_effects": "level-of-effect sorting",
+      "alt_splicing": "alternative splicing outcomes",
+      "checkpoint": "checkpoint pressure"
+    },
+    "modules": [
+      {
+        "id": "module_12_13",
+        "title": "Module 12-13 - RNA Binding and Splicing",
+        "shortLabel": "M12-13: RNA + Splicing",
+        "lectureIds": [
+          "molbio_w26_l12",
+          "molbio_w26_l13"
+        ],
+        "description": "RNA-binding proteins, splice-site recognition, and alternative splicing logic.",
+        "storySceneIds": {
+          "intro": "m12_intro",
+          "complete": "m12_complete"
+        },
+        "storyBeats": [
+          {
+            "at": 2,
+            "sceneId": "m12_methods_scene"
+          },
+          {
+            "at": 5,
+            "sceneId": "m12_splicing_scene"
+          },
+          {
+            "at": 8,
+            "sceneId": "m12_pressure_scene"
+          },
+          {
+            "at": 12,
+            "sceneId": "m12_checkpoint_scene"
+          }
+        ],
+        "checkpointAt": 12,
+        "noteKeys": [
+          "m12_rbp_overview",
+          "m12_interactions",
+          "m12_methods",
+          "m13_splicing_core",
+          "m13_self_splicing",
+          "m13_alt_splicing"
+        ],
+        "bbsBoardKeys": [
+          "midterm_hub",
+          "module_12_13_bbs",
+          "late_shift_gossip"
+        ],
+        "puzzleIds": [
+          "m12_p1",
+          "m12_p2",
+          "m12_p3",
+          "m12_mg1",
+          "m13_p1",
+          "m13_p2",
+          "m13_p3",
+          "m13_mg1",
+          "m13_mg3",
+          "m13_p4",
+          "m13_mg2",
+          "m13_mg4",
+          "m12_chk1",
+          "m12_chk2",
+          "m12_chk3"
+        ],
+        "minigameIds": [
+          "rbp_docking",
+          "splice_builder",
+          "level_sort",
+          "alternative_splicing"
+        ],
+        "completionLine": "Module 12-13 complete. The RNA blur is turning into a mechanism you can actually explain."
+      },
+      {
+        "id": "module_14_16",
+        "title": "Module 14-16 - RNA Processing Systems",
+        "shortLabel": "M14-16: Processing",
+        "lectureIds": [
+          "molbio_w26_l14",
+          "molbio_w26_l15",
+          "molbio_w26_l16"
+        ],
+        "description": "rRNA/tRNA processing, capping, polyadenylation, and coordination of processing.",
+        "unlockAfterModuleId": "module_12_13",
+        "storySceneIds": {
+          "intro": "m14_intro"
+        },
+        "noteKeys": [
+          "future_processing_note"
+        ],
+        "bbsBoardKeys": [
+          "midterm_hub",
+          "module_14_16_bbs"
+        ],
+        "puzzleIds": [],
+        "minigameIds": [],
+        "completionLine": "Module 14-16 complete."
+      },
+      {
+        "id": "module_17_19",
+        "title": "Module 17-19 - RNA Fate and Translation Setup",
+        "shortLabel": "M17-19: Fate + Ribosomes",
+        "lectureIds": [
+          "molbio_w26_l17",
+          "molbio_w26_l18",
+          "molbio_w26_l19"
+        ],
+        "description": "Turnover, nonsense-mediated decay, ribosomes, and initiation of translation.",
+        "unlockAfterModuleId": "module_14_16",
+        "storySceneIds": {
+          "intro": "m17_intro"
+        },
+        "noteKeys": [
+          "future_fate_note"
+        ],
+        "bbsBoardKeys": [
+          "midterm_hub",
+          "module_17_19_bbs"
+        ],
+        "puzzleIds": [],
+        "minigameIds": [],
+        "completionLine": "Module 17-19 complete."
+      },
+      {
+        "id": "module_20_22",
+        "title": "Module 20-22 - Silencing, Control, and Switches",
+        "shortLabel": "M20-22: Control Systems",
+        "lectureIds": [
+          "molbio_w26_l20",
+          "molbio_w26_l21",
+          "molbio_w26_l22"
+        ],
+        "description": "RNA interference, translational control, RNA editing, and riboswitches.",
+        "unlockAfterModuleId": "module_17_19",
+        "storySceneIds": {
+          "intro": "m20_intro",
+          "complete": "midterm_finale"
+        },
+        "noteKeys": [
+          "future_control_note"
+        ],
+        "bbsBoardKeys": [
+          "midterm_hub",
+          "module_20_22_bbs"
+        ],
+        "puzzleIds": [],
+        "minigameIds": [],
+        "completionLine": "Module 20-22 complete."
+      }
+    ],
+    "minigames": {
+      "splice_builder": {
+        "id": "splice_builder",
+        "type": "splice_builder",
+        "title": "Splice Builder",
+        "learningObjectives": [
+          "Identify the core players in splice-site recognition.",
+          "Use the branchpoint correctly during spliceosomal splicing.",
+          "Predict how exon choice changes the mature transcript."
+        ],
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s003",
+              "molbio_w26_l13_s007",
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ],
+        "successText": "Splicing map stabilized. The transcript now makes mechanistic sense.",
+        "failureFeedback": "The transcript is still off. Re-check recognition order, the branchpoint, and which exons survive."
+      },
+      "rbp_docking": {
+        "id": "rbp_docking",
+        "type": "rbp_docking",
+        "title": "RBP Docking",
+        "learningObjectives": [
+          "Match representative RNA-binding proteins to the role that makes them memorable for this module.",
+          "Distinguish splice-site support, translation support, iron-response control, and mRNA decay bias.",
+          "Turn Lecture 12 examples into functional anchors rather than isolated names."
+        ],
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l12",
+            "slideRefs": [
+              "molbio_w26_l12_s009",
+              "molbio_w26_l12_s018",
+              "molbio_w26_l12_s032",
+              "molbio_w26_l12_s035"
+            ]
+          }
+        ],
+        "successText": "Docking map locked. The factor names now point to jobs instead of floating loose in memory.",
+        "failureFeedback": "One or more factors are parked in the wrong lane. Re-anchor each example to its lecture role."
+      },
+      "level_sort": {
+        "id": "level_sort",
+        "type": "level_sort",
+        "title": "Level Check",
+        "learningObjectives": [
+          "Separate DNA-level ideas from RNA-processing events.",
+          "Distinguish mature transcript output from downstream protein consequence.",
+          "Reduce the classic exam mistake of answering at the wrong level."
+        ],
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s015",
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s021",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ],
+        "successText": "Level map stabilized. You are less likely to answer a transcript question like it was a DNA question.",
+        "failureFeedback": "One or more statements are sitting at the wrong biological level."
+      },
+      "alternative_splicing": {
+        "id": "alternative_splicing",
+        "type": "alternative_splicing",
+        "title": "Alternative Splicing Simulator",
+        "learningObjectives": [
+          "Build an isoform rather than only naming it.",
+          "Predict how exon choice changes transcript or protein output.",
+          "Connect lecture examples to consequences instead of isolated terms."
+        ],
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s021",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ],
+        "successText": "Isoform build confirmed. Exon choice and consequence are now linked in memory.",
+        "failureFeedback": "The isoform or its consequence is off. Reconnect exon choice to output."
+      }
+    },
+    "storyScenes": {
+      "midterm_opening": {
+        "scene": "CHAPTER 1 - EXAM SPRINT",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>START:</b><br>Begin before you feel ready.</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "Twelve to twenty-two. I do not even know why I opened all of them at once. It just... felt dishonest to ignore any of it."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Yeah, no, I opened one and my laptop made a noise like it was disappointed in me. Closed it immediately. Self-preservation."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "You are both doing that thing where you treat the whole exam like one problem. It is not."
+          },
+          {
+            "speaker": "REN",
+            "text": "It kind of is. It is all connected. That is what makes it worse."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "You do not carry it all at once."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Speak for yourself. I am carrying at least six bad decisions right now."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Detected: cognitive overload across multiple modules. Recommendation: begin with Module 12-13. Your avoidance threshold is lowest there."
+          },
+          {
+            "speaker": "REN",
+            "text": "...It knows which one I am avoiding."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Then start there."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Great. We are taking orders from the haunted computer now. Love that for us."
+          },
+          {
+            "speaker": "REN",
+            "text": "No, it is... right. If I do not start somewhere, I am just going to keep sitting here thinking about how much there is."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Module 12-13 is prepared. I will adjust difficulty based on your response patterns."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "It said \"response patterns\" like it is already disappointed."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "Go on."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Okay. Module 12-13."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Start Module 12-13",
+            "window": "console",
+            "moduleId": "module_12_13"
+          },
+          {
+            "text": "Open Notes First",
+            "window": "notes",
+            "moduleId": "module_12_13"
+          }
+        ]
+      },
+      "m12_intro": {
+        "scene": "CHAPTER 2 - TOO MANY MOVING PARTS",
+        "bgKey": "terminal_7",
+        "bytosHtml": "<div class=\"tip\"><b>STUDY FOCUS:</b><br>Lecture 12 gives you the control map. Lecture 13 gives you the machine. Learn them in that order.</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "Lecture 12 is the kind of lecture that makes me feel stupid in a very specific way. Every slide makes sense by itself, and then five slides later I have no idea what lives where anymore."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "My notes for this section currently say, quote, 'RIP, CLIP, proteins everywhere, ask God.' So I would also like a cleaner system."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Fine. Here is the cleaner system. First: what RNA-binding proteins are doing in the broadest sense. Second: how binding works well enough for the course. Third: what the methods actually let you claim. Then you earn the right to touch splicing."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "People make late-night studying harder than it already is. You do not need to understand the whole building. You need the next room with the light on."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Back to the console",
+            "window": "console"
+          },
+          {
+            "text": "Open the chapter notes",
+            "window": "notes"
+          }
+        ]
+      },
+      "m12_methods_scene": {
+        "scene": "CHAPTER 3 - METHODS CUT THE FOG",
+        "bgKey": "cafe_main",
+        "bytosHtml": "<div class=\"tip\"><b>CHECKPOINT:</b><br>You are past the first panic wall. Keep the question simple: what kind of evidence does each method give you?</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "Okay, this is better. I do not need to memorize every step of every protocol. I need to know what kind of answer RIP gives me, what kind of answer CLIP gives me, and why those are not interchangeable."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Yes. Exactly. RIP is like, 'these RNAs and this protein were seen together in public,' and CLIP is more like, 'no, seriously, this thing was actually binding here.' Which is still not scientific language, but it is a start."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "It is a better start than whatever you were doing before. Methods matter because they limit the claim. If you remember the shape of the claim, the method usually follows."
+          },
+          {
+            "speaker": "REN",
+            "text": "That might be the first time this section has felt finite."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Recommendation: bind names to jobs next. Representative proteins are easier to keep when each one owns a lane."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Play the docking board",
+            "window": "console"
+          },
+          {
+            "text": "Review method notes",
+            "window": "notes"
+          }
+        ]
+      },
+      "m12_splicing_scene": {
+        "scene": "Cut in the Right Place",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>SPLICING:</b><br>Order matters more than names.</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "Hold on... it is not random. It looks messy, but it is not. It is steps. It always goes in steps."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Yeah, but the steps have names like U1, U2. Who named these, a Wi-Fi router?"
+          },
+          {
+            "speaker": "NADIA",
+            "text": "The names do not matter. The order does. You lose the order, you lose everything."
+          },
+          {
+            "speaker": "REN",
+            "text": "U1 finds it first. Then U2 comes in, like it confirms it. And then the rest just... builds around that."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "So it is like assembling a team. One guy points, one guy nods, then suddenly there is a whole operation happening."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "It is not a team. It is a sequence. Each step only makes sense because of the last one."
+          },
+          {
+            "speaker": "REN",
+            "text": "No, I get what she means. If I skip ahead, it stops making sense. But if I follow it... it actually flows."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "You are transitioning from memorization to process tracking. This is required for accuracy."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Process tracking sounds like something I would fail immediately."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "You will now perform it. Interactive sequence initialized."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Okay. Yeah. Let us try it."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Launch Splice Builder",
+            "window": "console"
+          },
+          {
+            "text": "Read the splicing notes",
+            "window": "notes"
+          }
+        ]
+      },
+      "m12_pressure_scene": {
+        "scene": "Wrong Level",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>ADJUST:</b><br>Check what level you are answering from.</div><div class=\"tip\">{WEAK_SPOT_LINE}</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "I know exactly where I am messing up now. I keep answering like it is just sequence, like it is only the letters. And then the question shifts and I am already wrong."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Yeah, that is my specialty. I see something familiar and I just... commit. Full confidence, zero verification. It is a lifestyle."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "You are answering at the wrong level. You are staying at sequence when the question moved to structure."
+          },
+          {
+            "speaker": "REN",
+            "text": "It does not feel like it moved. That is the problem. It looks the same and then suddenly it is not."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "That is how they get you. It is like those trick questions where you are already halfway through being wrong before you realize it."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "It is not a trick. It is layered. You just did not switch layers."
+          },
+          {
+            "speaker": "REN",
+            "text": "So I need to... check what the question is actually asking before I lock in."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "Slow it down a notch."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Slowing down is terrifying, by the way. That is when I realize I do not know things."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "You already do not. You are just noticing it earlier."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Okay. Next one, I am going to pause. Just actually read it properly."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "Good."
+          },
+          {
+            "speaker": "REN",
+            "text": "I do not need to be fast. I just need to stop answering the wrong question."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Finish the chapter",
+            "window": "console"
+          },
+          {
+            "text": "Open STORY again later",
+            "window": "console"
+          }
+        ]
+      },
+      "m12_complete": {
+        "scene": "What Stayed",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>COMPLETE:</b><br>Keep what holds when it is messy.</div><div class=\"tip\">Run grade: {PERF_LABEL}. {STRONGEST_LINE}</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "It is not clean. I still hesitate on half of it. But I can actually follow it now... even when it shifts."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "That is a win. I am calling it. I am doing a small, respectful victory dance internally because Mr. K is watching."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Do not call it anything yet. Just notice that you did not fall apart when it got harder."
+          },
+          {
+            "speaker": "REN",
+            "text": "Yeah. Before, one weird question and I would lose the whole thread. Now it just... bends a bit."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Flexible brain. We love to see it. Mine snaps immediately, so this is aspirational."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "You stayed with it."
+          },
+          {
+            "speaker": "REN",
+            "text": "I think that is the first time tonight I did not feel like I was guessing."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Good. Then it is yours now."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Module 12-13 complete. Your error patterns have narrowed. Residual weaknesses persist."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Of course they do. Keeps things interesting."
+          },
+          {
+            "speaker": "REN",
+            "text": "What is next?"
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Module 14-16 is ready. It will build directly on this. Your current state is sufficient, but fragile."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Then do not let it cool off too long."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "No break? Not even a celebratory snack break?"
+          },
+          {
+            "speaker": "MR. K",
+            "text": "Five minutes."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Yeah. Five minutes. Then we keep going."
+          }
+        ],
+        "choices": [
+          {
+            "text": "See the next chapter",
+            "window": "story",
+            "moduleId": "module_14_16",
+            "sceneId": "m14_intro"
+          },
+          {
+            "text": "Stay in Module 12-13 for review",
+            "window": "console",
+            "moduleId": "module_12_13"
+          }
+        ]
+      },
+      "m12_checkpoint_scene": {
+        "scene": "Hold It Together",
+        "bgKey": "cafe_main",
+        "bytosHtml": "<div class=\"tip\"><b>CHECKPOINT:</b><br>Clarity under pressure reveals what stays.</div><div class=\"tip\">{WEAK_SPOT_LINE}</div>",
+        "dialogue": [
+          {
+            "speaker": "BYTE/OS",
+            "text": "Checkpoint initiated. Integrated assessment. I will increase pressure until your pattern breaks."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Cool. Love that wording. Super normal thing to say to a human being."
+          },
+          {
+            "speaker": "REN",
+            "text": "No, it is fine. I just... need to see if it still holds when it is not clean."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Then do not hesitate. First answer only. If you start second-guessing, you are done."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Okay, but if I black out mid-question, tell my family I tried."
+          },
+          {
+            "speaker": "REN",
+            "text": "All right. Read it once. Do not overthink. Figure out what level it is asking."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Your previous errors were clustered around misapplied levels of analysis. This will be tested."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Okay. It is not sequence. It is interaction. No, structure affecting interaction."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Commit."
+          },
+          {
+            "speaker": "REN",
+            "text": "I am committing."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Correct."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Yes. First hit. We are alive."
+          },
+          {
+            "speaker": "REN",
+            "text": "Do not celebrate. Next one."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Increasing complexity."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Of course you are."
+          },
+          {
+            "speaker": "REN",
+            "text": "...This one is trying to make me rush."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "It is not. You are."
+          },
+          {
+            "speaker": "REN",
+            "text": "Right. Pause. What is it actually asking... okay, process, not outcome."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Correct. Your response latency increased, but error probability decreased."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Slow and correct. That is a rebrand for me, honestly."
+          },
+          {
+            "speaker": "REN",
+            "text": "Last one."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Final question will combine all prior concepts."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "Boss phase two. I knew it."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Okay. It is mixing splicing and binding. So I cannot treat them separately."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Good. Keep going."
+          },
+          {
+            "speaker": "REN",
+            "text": "Binding affects which sites are recognized... which changes the outcome. So it is upstream control."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Correct."
+          },
+          {
+            "speaker": "DOUGIE",
+            "text": "He did it. Full clear."
+          },
+          {
+            "speaker": "REN",
+            "text": "...Okay. That actually held. Even when it got messy."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Checkpoint complete. Your understanding remains intact under increased cognitive load."
+          },
+          {
+            "speaker": "NADIA",
+            "text": "Good. Now you can trust it."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "Take a breath."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Start the checkpoint",
+            "window": "console"
+          },
+          {
+            "text": "Review notes first",
+            "window": "notes"
+          }
+        ]
+      },
+      "m14_intro": {
+        "scene": "CHAPTER 7 - THERE IS AN ORDER TO THIS",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>NEXT ARC:</b><br>Module 14-16 is scaffolded but not fully playable yet. This scene marks the unlock and where the next build should go.</div>",
+        "dialogue": [
+          {
+            "speaker": "MR. K",
+            "text": "Most difficult material gets easier the same way. First it is noise. Then it is parts. Then one night the order shows up."
+          },
+          {
+            "speaker": "REN",
+            "text": "That was the first chapter, I think. Not mastery. Just... a route. Like I could finally see where to stand."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Future module queued: RNA processing systems. Content not yet authored. Narrative expectation: increasing order, increasing fatigue."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Return to the current module",
+            "window": "console",
+            "moduleId": "module_12_13"
+          }
+        ]
+      },
+      "m17_intro": {
+        "scene": "CHAPTER 8 - FATIGUE PHASE",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>FUTURE ARC:</b><br>Module 17-19 is planned for RNA fate, decay, ribosomes, and initiation.</div>",
+        "dialogue": [
+          {
+            "speaker": "DOUGIE",
+            "text": "This is the stage of the night where caffeine stops being a beverage and becomes a belief system."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Future module scaffold active. Expected mood: fatigue, false confidence, and a dangerous interest in ribosomes."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Back to the console",
+            "window": "console",
+            "moduleId": "module_12_13"
+          }
+        ]
+      },
+      "m20_intro": {
+        "scene": "CHAPTER 9 - CONTROL SYSTEMS",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>FUTURE ARC:</b><br>Module 20-22 is planned for RNA interference, translational control, editing, and riboswitches.</div>",
+        "dialogue": [
+          {
+            "speaker": "NADIA",
+            "text": "By the last chapter the course stops being impressed that you know names. It wants to know whether you understand regulation as a system."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Future module scaffold active. Expected emphasis: control logic, outcomes, and pattern recognition under pressure."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Back to the console",
+            "window": "console",
+            "moduleId": "module_12_13"
+          }
+        ]
+      },
+      "midterm_finale": {
+        "scene": "FINAL CHAPTER - PRE-EXAM QUIET",
+        "bgKey": "late_night",
+        "bytosHtml": "<div class=\"tip\"><b>FINAL SCENE:</b><br>The full midterm campaign is not built yet, but this is the intended emotional endpoint.</div>",
+        "dialogue": [
+          {
+            "speaker": "REN",
+            "text": "I still do not know everything. But it does not feel like standing in front of a wave anymore."
+          },
+          {
+            "speaker": "MR. K",
+            "text": "Nobody ever walks into an exam feeling complete. You just want to arrive steady."
+          },
+          {
+            "speaker": "BYTE/OS",
+            "text": "Session complete. Rest is now more valuable than one additional panicked hour."
+          }
+        ],
+        "choices": [
+          {
+            "text": "Return to the console",
+            "window": "console",
+            "moduleId": "module_12_13"
+          }
+        ]
+      }
+    },
+    "feedback": {
+      "methods": [
+        "You described what was found, but not what the method allows you to claim.",
+        "You treated absence of signal as absence of interaction. That is not supported here.",
+        "Your answer ignores how the interaction was preserved before isolation.",
+        "You are assuming stability where the method only captures what survives handling.",
+        "You answered as if all interactions are equally detectable. They are not.",
+        "You identified the interaction, but not whether it would persist without intervention."
+      ],
+      "rbp_logic": [
+        "You focused on the RNA sequence but ignored what the protein is selecting for.",
+        "You treated binding as passive. It changes what happens next.",
+        "You recognized the motif, but not why it matters functionally.",
+        "You assumed binding is uniform. It is selective and conditional.",
+        "You identified where binding occurs, but not its consequence.",
+        "You are describing presence, not control."
+      ],
+      "splice_mechanism": [
+        "You skipped a step. The order is what gives the mechanism meaning.",
+        "You identified the components but not when they act.",
+        "You treated recognition as simultaneous. It is sequential.",
+        "You placed the branchpoint incorrectly in the process.",
+        "You described the outcome without accounting for how it forms.",
+        "You are compressing multiple steps into one. That is where the error begins."
+      ],
+      "self_splicing": [
+        "You merged the mechanisms. They are similar in outcome, not in execution.",
+        "You treated external factors as required when they are not.",
+        "You identified the product, but not how it is generated.",
+        "You assumed protein involvement where the RNA acts alone.",
+        "You collapsed two distinct pathways into one explanation.",
+        "You focused on structure, but missed the catalytic difference."
+      ],
+      "level_effects": [
+        "You answered at the sequence level when the question asked about outcome.",
+        "You jumped to protein consequences without resolving RNA processing first.",
+        "You are mixing levels. Separate them before choosing.",
+        "You assumed a DNA change when the variation occurs after transcription.",
+        "You identified the mechanism but not where its effect appears.",
+        "You are describing what exists, not what changes."
+      ],
+      "alt_splicing": [
+        "You treated exon variation as a mutation. It is a choice, not a change.",
+        "You focused on presence of sequence, not its inclusion.",
+        "You assumed one transcript. There are multiple valid outcomes.",
+        "You identified the exon, but not whether it is kept or skipped.",
+        "You described the gene, not the isoform.",
+        "You are treating variability as error. It is regulated."
+      ],
+      "checkpoint": [
+        "You committed before identifying what the question was asking.",
+        "You recognized a pattern and stopped checking it.",
+        "You answered too quickly for the level of integration required.",
+        "You collapsed distinct ideas into one under pressure.",
+        "You trusted familiarity over accuracy.",
+        "You did not pause to confirm the level of analysis."
+      ]
+    },
+    "notes": {
+      "m12_rbp_overview": {
+        "label": "RBP Core",
+        "html": "<h3>RNA-BINDING PROTEINS</h3><p>Lecture 12 reframes gene expression as regulation across the full RNA and protein life cycle, not just transcription initiation.</p><ul><li>RNA-binding proteins act on pre-mRNA, mature mRNA, non-coding RNA, localization, decay, translation, and more.</li><li>There are over two thousand RBPs with diverse roles.</li><li>Post-transcriptional control lets cells respond faster than waiting to remake transcriptional programs from scratch.</li></ul><p>Memory hook: RBPs are not one niche topic. They are a recurring control layer across RNA life.</p>"
+      },
+      "m12_interactions": {
+        "label": "Binding Logic",
+        "html": "<h3>HOW RBPS BIND RNA</h3><p>The lecture uses interaction principles to make RNA-protein binding feel less magical.</p><ul><li>Hydrogen bonds and electrostatic interactions help proteins read RNA shape and chemistry.</li><li>Base stacking and aromatic contacts can stabilize RNA recognition.</li><li>Specificity comes from a combination of structure, sequence context, and domain architecture rather than one universal rule.</li><li>RNA-recognition motifs and other domains should be remembered as functional tools, not just vocabulary.</li></ul><p>Exam hook: when asked why one protein binds one region better than another, think <b>interaction logic plus context</b>, not one single bond.</p>"
+      },
+      "m12_methods": {
+        "label": "Methods",
+        "html": "<h3>RIP, CLIP, AND INTEGRATION</h3><p>Lecture 12 emphasizes that methods answer different questions about RNA-protein interactions.</p><ul><li><b>RIP</b>: immunoprecipitate an RBP and identify associated RNAs.</li><li><b>CLIP</b>: crosslink RNA-protein interactions first, then recover binding relationships with stronger positional confidence.</li><li>Mass spectrometry, bioinformatics, and other assays help turn binding data into functional claims.</li></ul><img class=\"study-figure\" src=\"assets/study/molbio/rip-clip-comparison.svg\" alt=\"RIP versus CLIP comparison graphic\"><div class=\"notes-interactive-card\"><div class=\"notes-interactive-title\">Method Lens</div><div class=\"notes-interactive-copy\" id=\"method-lens-copy\">Pick a method lens to reinforce what each one preserves.</div><div class=\"notes-chip-row\" data-note-toggle-group data-note-target=\"method-lens-copy\" data-note-default=\"Pick a method lens to reinforce what each one preserves.\"><button class=\"notes-chip active\" data-note-value data-note-copy=\"RIP is strongest when you want associated RNAs that remain together through isolation.\">RIP</button><button class=\"notes-chip\" data-note-value data-note-copy=\"CLIP crosslinks contact first, so it better preserves where binding existed before purification.\">CLIP</button><button class=\"notes-chip\" data-note-value data-note-copy=\"Integration matters because method choice changes the strength and shape of the claim you can defend.\">Integration</button></div></div><p>Exam-safe distinction: methods show association and binding logic, but interpreting function usually requires integration with additional data.</p>"
+      },
+      "m13_splicing_core": {
+        "label": "Splicing Core",
+        "html": "<h3>CANONICAL SPLICING</h3><p>Pre-mRNA contains exons and introns. The spliceosome removes introns and ligates exons.</p><ul><li>U1 recognizes the 5-prime splice site.</li><li>U2 recognizes the branchpoint.</li><li>U2AF helps define the 3-prime splice region.</li><li>U5 helps align exons, while U6 participates in catalytic rearrangement.</li><li>The first reaction uses the 2-prime OH of the branchpoint A to form a lariat intermediate.</li></ul><img class=\"study-figure\" src=\"assets/study/molbio/splice-lariat.svg\" alt=\"Canonical splicing and lariat formation\"><p>Memory hook: 5-prime site, branchpoint, 3-prime region, lariat, exon ligation.</p>"
+      },
+      "m13_self_splicing": {
+        "label": "Group I vs II",
+        "html": "<h3>SELF-SPLICING VS SPLICEOSOMAL LOGIC</h3><p>Lecture 13 uses self-splicing to show that intron removal chemistry can be organized in different ways.</p><ul><li><b>Group I introns</b> use an external guanosine nucleophile to begin the first transesterification.</li><li><b>Group II introns</b> use an internal branchpoint adenosine and form a lariat-like intermediate.</li><li>Spliceosomal splicing is mechanistically closer to Group II logic than to Group I.</li></ul><img class=\"study-figure\" src=\"assets/study/molbio/group-introns-comparison.svg\" alt=\"Group I versus Group II intron comparison\"><p>Exam hook: if you see <b>external guanosine</b>, think Group I. If you see <b>branchpoint A and lariat</b>, think Group II or spliceosomal logic.</p>"
+      },
+      "m13_alt_splicing": {
+        "label": "Alt Splicing",
+        "html": "<h3>ALTERNATIVE SPLICING</h3><p>One DNA gene can yield multiple mature mRNAs through different exon choices.</p><ul><li>Alternative splicing does <b>not</b> change genomic DNA.</li><li>It can change coding sequence, UTRs, localization, stability, or protein activity.</li><li>SR proteins and other RNA-binding factors help commit transcripts to particular splice patterns.</li><li>Examples from the lecture include Drosophila sex determination, FOXP1 isoforms, and extreme Dscam diversity.</li></ul><img class=\"study-figure\" src=\"assets/study/molbio/alt-splicing-isoforms.svg\" alt=\"Alternative splicing isoform comparison\"><img class=\"study-figure\" src=\"assets/study/molbio/level-of-effect-ladder.svg\" alt=\"Level of effect ladder from DNA to protein\"><div class=\"notes-interactive-card\"><div class=\"notes-interactive-title\">Level Check</div><div class=\"notes-interactive-copy\" id=\"level-ladder-copy\">Move through the ladder to keep DNA, processing, transcript, and protein effects separate.</div><div class=\"notes-stepper\" data-note-stepper data-note-target=\"level-ladder-copy\"><button class=\"notes-step-nav\" data-step-nav=\"prev\">[ PREV ]</button><div class=\"notes-step-labels\"><span class=\"notes-step-label\" data-step-label data-step-copy=\"DNA level: sequence in the gene itself changes before transcription starts.\">DNA</span><span class=\"notes-step-label\" data-step-label data-step-copy=\"Processing level: splice-site choice, branchpoint use, or exon inclusion changes how pre-mRNA is handled.\">Processing</span><span class=\"notes-step-label\" data-step-label data-step-copy=\"Transcript level: the mature mRNA isoform is different after processing decisions are made.\">Transcript</span><span class=\"notes-step-label\" data-step-label data-step-copy=\"Protein level: the output protein can change activity, localization, or domain content downstream of the RNA decision.\">Protein</span></div><button class=\"notes-step-nav\" data-step-nav=\"next\">[ NEXT ]</button></div></div><p>Exam-safe distinction: the output changes because RNA processing choices change, not because the gene itself mutates.</p>"
+      },
+      "future_processing_note": {
+        "label": "Next: Processing",
+        "html": "<h3>MODULE 14-16 PREVIEW</h3><p>This module is unlocked in the roadmap but not fully authored yet. It will cover rRNA/tRNA processing, capping, polyadenylation, and coordinated processing.</p>"
+      },
+      "future_fate_note": {
+        "label": "Next: Fate",
+        "html": "<h3>MODULE 17-19 PREVIEW</h3><p>This future module will cover turnover, nonsense-mediated decay, ribosomes, and initiation of translation.</p>"
+      },
+      "future_control_note": {
+        "label": "Next: Control",
+        "html": "<h3>MODULE 20-22 PREVIEW</h3><p>This future module will cover RNA interference, translational control, RNA editing, and riboswitches.</p>"
+      }
+    },
+    "bbsBoards": {
+      "midterm_hub": {
+        "name": "Midterm Hub",
+        "posts": [
+          {
+            "author": "Ren",
+            "date": "2026-03-19",
+            "subject": "If you start too wide, it never starts",
+            "body": "I opened everything at once tonight and it just... flattened me. It all looked important and none of it stuck. I had to close everything and pick one thread. Not the easiest one, the one that kept showing up. That helped more than I expected. Still tired though."
+          },
+          {
+            "author": "Dougie",
+            "date": "2026-03-19",
+            "subject": "midterm strategy (patent pending)",
+            "body": "step 1: panic a little (sets the tone)\nstep 2: open ONE lecture only\nstep 3: pretend it is the only lecture that exists in the universe\nstep 4: do NOT think about the others waiting in the dark\nstep 5: reward yourself with a snack you did not earn\n\nI am on step 5. Highly recommend."
+          },
+          {
+            "author": "Nadia",
+            "date": "2026-03-19",
+            "subject": "Stop treating it like a pile",
+            "body": "It is not a pile of facts. It is a set of systems that repeat with variation.\nIf you cannot see the pattern, you are still looking at the surface.\nPick one mechanism. Follow it until it shows up somewhere else.\nThen you are actually studying."
+          },
+          {
+            "author": "BYTE/OS",
+            "date": "2026-03-19",
+            "subject": "Observation: entry behavior",
+            "body": "Most users delay starting until anxiety decreases.\n\nAnxiety does not decrease before starting.\n\nInitiating work reduces uncertainty. Reduced uncertainty lowers perceived anxiety.\n\nThe sequence is often misunderstood."
+          }
+        ]
+      },
+      "module_12_13_bbs": {
+        "name": "Module 12-13 Board",
+        "posts": [
+          {
+            "author": "Ren",
+            "date": "2026-03-19",
+            "subject": "RIP vs CLIP finally clicked (kind of)",
+            "body": "I kept mixing them up until I stopped trying to memorize definitions. RIP is what survives. CLIP is what was there. That shift helped a lot. Still messy, but I can actually tell them apart now when I see a question."
+          },
+          {
+            "author": "Dougie",
+            "date": "2026-03-19",
+            "subject": "CLIP is basically evidence locker mode",
+            "body": "RIP = \"who is still holding hands when the lights come on\"\nCLIP = \"freeze everyone mid-conversation, nobody move\"\n\nif this shows up on the exam I am writing it exactly like this and hoping for partial credit"
+          },
+          {
+            "author": "Nadia",
+            "date": "2026-03-19",
+            "subject": "The mistake you are making",
+            "body": "Most of you are answering at the wrong level.\nYou see a sequence and assume that is the question.\nIt usually is not.\nAsk what is being tested: sequence, structure, interaction, or outcome.\nIf you do not switch levels, you will keep getting the same type of question wrong."
+          },
+          {
+            "author": "BYTE/OS",
+            "date": "2026-03-19",
+            "subject": "Pattern update",
+            "body": "User errors in this module frequently cluster around:\n- overreliance on sequence signals\n- failure to integrate binding context\n\nTargeted variation will be introduced in subsequent prompts.\n\nYou will recognize this pattern when it is presented again."
+          }
+        ]
+      },
+      "late_shift_gossip": {
+        "name": "Late Shift",
+        "posts": [
+          {
+            "author": "Dougie",
+            "date": "2026-03-19",
+            "subject": "who turned the lights dimmer after 1am",
+            "body": "not accusing anyone but the cafe definitely gets 20% more existential after midnight\nlike the chairs are quieter\nmy thoughts are louder\nand the computer is starting to feel like it knows me personally\n\nanyway if I disappear I have simply become part of the furniture"
+          },
+          {
+            "author": "Ren",
+            "date": "2026-03-19",
+            "subject": "it gets quieter around this time",
+            "body": "There is a point where everyone stops talking and you can just hear keyboards and the hum from the back machines. It is not peaceful exactly. Just... focused. Like everyone decided to stay, even if they are tired."
+          },
+          {
+            "author": "Nadia",
+            "date": "2026-03-19",
+            "subject": "Observation",
+            "body": "People either leave before this hour or become very serious.\nThere is not much in between.\nIt is easier to work when fewer people are pretending."
+          },
+          {
+            "author": "Mr. K",
+            "date": "2026-03-19",
+            "subject": "Still Open",
+            "body": "If you are still here, you are doing enough."
+          }
+        ]
+      },
+      "module_14_16_bbs": {
+        "name": "Processing Queue",
+        "posts": [
+          {
+            "author": "BYTE/OS",
+            "date": "2026-03-18",
+            "subject": "Module pending",
+            "body": "Processing module unlocked. Content authoring still in progress."
+          }
+        ]
+      },
+      "module_17_19_bbs": {
+        "name": "RNA Fate",
+        "posts": [
+          {
+            "author": "BYTE/OS",
+            "date": "2026-03-18",
+            "subject": "Module pending",
+            "body": "RNA fate module scaffolded. Content authoring still in progress."
+          }
+        ]
+      },
+      "module_20_22_bbs": {
+        "name": "Control Systems",
+        "posts": [
+          {
+            "author": "BYTE/OS",
+            "date": "2026-03-18",
+            "subject": "Module pending",
+            "body": "Control systems module scaffolded. Content authoring still in progress."
+          }
+        ]
+      }
+    },
+    "puzzles": [
+      {
+        "id": "m12_p1",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l12",
+        "mode": "multiple_choice",
+        "title": "MODULE 12-13 - REGULATION IS NOT JUST ON/OFF",
+        "desc": "Which statement best matches Lecture 12's big-picture definition of gene expression regulation?",
+        "bytosTip": "<div class=\"tip\"><b>FRAME THE WHOLE CHAPTER:</b><br>Lecture 12 says regulation happens across the gene product life cycle, not just at transcription initiation.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Gene expression is mostly just turning transcription on or off."
+          },
+          {
+            "id": "b",
+            "label": "Regulation can occur before, during, and after transcription, as well as during translation and beyond."
+          },
+          {
+            "id": "c",
+            "label": "Only proteins regulate gene expression meaningfully."
+          },
+          {
+            "id": "d",
+            "label": "Post-transcriptional regulation is too slow to matter."
+          }
+        ],
+        "correctChoiceId": "b",
+        "canonicalAnswer": "Regulation can occur across the full gene product life cycle.",
+        "explanation": "The lecture explicitly argues against a simple on-off view. Cells regulate gene expression before transcription initiation, during RNA processing, during translation, and after protein production too.",
+        "learningObjective": "Reframe gene expression control as a multi-stage system.",
+        "masteryTags": [
+          "rbp_logic"
+        ],
+        "rewards": {
+          "xp": 35,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l12",
+            "slideRefs": [
+              "molbio_w26_l12_s008",
+              "molbio_w26_l12_s039"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m12_p2",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l12",
+        "mode": "multiple_choice",
+        "title": "MODULE 12-13 - IRON RESPONSE CASE",
+        "desc": "In iron deficiency, what is the useful Lecture 12-level takeaway from the IRP example?",
+        "bytosTip": "<div class=\"tip\"><b>CASE MODE:</b><br>Use the iron-response example to remember that RBPs can alter transcript fate after transcription, not just gene transcription itself.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "IRP proves that all RNA-binding proteins only affect transcription initiation."
+          },
+          {
+            "id": "b",
+            "label": "IRP illustrates how RNA-binding factors can change mRNA stability or translation depending on context."
+          },
+          {
+            "id": "c",
+            "label": "IRP is mainly a splicing factor that removes introns."
+          },
+          {
+            "id": "d",
+            "label": "The example shows that RNA-binding proteins only matter in bacteria."
+          }
+        ],
+        "correctChoiceId": "b",
+        "canonicalAnswer": "IRP shows that RNA-binding factors can regulate transcript stability or translation depending on the RNA context.",
+        "explanation": "The iron-response example is memorable because it shows post-transcriptional control in action. The broader exam-safe lesson is that RBPs change RNA fate after transcription by binding specific transcript features.",
+        "learningObjective": "Use the IRP example as a model of post-transcriptional control.",
+        "masteryTags": [
+          "rbp_logic"
+        ],
+        "rewards": {
+          "xp": 35,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l12",
+            "slideRefs": [
+              "molbio_w26_l12_s009",
+              "molbio_w26_l12_s010"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m12_p3",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l12",
+        "mode": "short_answer",
+        "title": "MODULE 12-13 - METHOD MATCH",
+        "desc": "In one short phrase, what is the main study-level purpose of CLIP in RBP research?",
+        "bytosTip": "<div class=\"tip\"><b>METHOD HOOK:</b><br>Think binding evidence with stronger positional confidence after crosslinking, not full protocol detail.</div>",
+        "acceptedAnswers": [
+          "identify where an rbp binds rna",
+          "map rna binding sites",
+          "find rna binding sites for an rbp",
+          "show where a protein binds rna",
+          "identify rna protein binding sites",
+          "locate rna binding sites",
+          "determine where a protein binds rna"
+        ],
+        "canonicalAnswer": "CLIP is used to identify where an RNA-binding protein binds RNA.",
+        "explanation": "At the exam-relevant level, CLIP is the method memory hook for locating RNA-protein binding interactions with stronger site-oriented confidence than a vague association answer.",
+        "learningObjective": "Differentiate the purpose of CLIP from broader RBP evidence collection.",
+        "masteryTags": [
+          "methods"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/rip-clip-comparison.svg",
+          "alt": "RIP versus CLIP comparison"
+        },
+        "rewards": {
+          "xp": 40,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l12",
+            "slideRefs": [
+              "molbio_w26_l12_s021",
+              "molbio_w26_l12_s029",
+              "molbio_w26_l12_s039"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m12_mg1",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l12",
+        "mode": "minigame",
+        "minigameId": "rbp_docking",
+        "title": "RBP DOCKING - FUNCTION LANES",
+        "desc": "Dock representative factors into the lane that best matches their memorable role in this module.",
+        "bytosTip": "<div class=\"tip\"><b>MINIGAME:</b><br>Use the examples as anchors. Each factor should map to one lane you can actually explain out loud.</div>",
+        "config": {
+          "tokens": [
+            {
+              "id": "u2af",
+              "label": "U2AF"
+            },
+            {
+              "id": "pabp",
+              "label": "PABP"
+            },
+            {
+              "id": "irp",
+              "label": "IRP"
+            },
+            {
+              "id": "ythdf2",
+              "label": "YTHDF2"
+            }
+          ],
+          "slots": [
+            {
+              "id": "splice_site_definition",
+              "label": "Splice-site definition"
+            },
+            {
+              "id": "translation_support",
+              "label": "Translation support"
+            },
+            {
+              "id": "iron_response_stability",
+              "label": "Iron-response control"
+            },
+            {
+              "id": "mrna_decay_bias",
+              "label": "mRNA decay bias"
+            }
+          ],
+          "correctAssignments": {
+            "splice_site_definition": "u2af",
+            "translation_support": "pabp",
+            "iron_response_stability": "irp",
+            "mrna_decay_bias": "ythdf2"
+          },
+          "failureFeedbackMap": {
+            "splice_site_definition": "That lane is about splice-site definition. Re-anchor the factor that helps define the 3-prime splice region.",
+            "translation_support": "This lane is the translation-support memory hook. Think poly(A)-binding protein, not a splicing or decay factor.",
+            "iron_response_stability": "That lane should point back to the Lecture 12 iron-response example rather than a general RNA fate factor.",
+            "mrna_decay_bias": "This lane is about a factor associated with transcript-decay bias in the lecture examples, not splice-site recognition or translation support."
+          }
+        },
+        "canonicalAnswer": "U2AF -> splice-site definition; PABP -> translation support; IRP -> iron-response control; YTHDF2 -> mRNA decay bias.",
+        "explanation": "The point of the board is not memorizing four names in isolation. It is attaching each representative factor to a role you can retrieve under exam pressure.",
+        "learningObjective": "Turn Lecture 12 example proteins into functional anchors.",
+        "masteryTags": [
+          "rbp_logic"
+        ],
+        "rewards": {
+          "xp": 60,
+          "rep": 2,
+          "coins": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l12",
+            "slideRefs": [
+              "molbio_w26_l12_s009",
+              "molbio_w26_l12_s018",
+              "molbio_w26_l12_s032",
+              "molbio_w26_l12_s035"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_p1",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "sequence",
+        "title": "MODULE 12-13 - SPLICE SITE RECOGNITION ORDER",
+        "desc": "Build the simplified recognition logic for spliceosomal splicing.",
+        "bytosTip": "<div class=\"tip\"><b>SEQUENCE MODE:</b><br>Keep it study-friendly: who recognizes which region before catalytic rearrangement?</div>",
+        "sequenceSteps": [
+          {
+            "id": "u1",
+            "label": "U1 recognizes the 5-prime splice site"
+          },
+          {
+            "id": "u2",
+            "label": "U2 recognizes the branchpoint"
+          },
+          {
+            "id": "u2af",
+            "label": "U2AF helps define the 3-prime splice region"
+          },
+          {
+            "id": "u5",
+            "label": "U5 helps align the exons"
+          },
+          {
+            "id": "u6",
+            "label": "U6 replaces U1 and participates in catalytic rearrangement"
+          }
+        ],
+        "correctOrder": [
+          "u1",
+          "u2",
+          "u2af",
+          "u5",
+          "u6"
+        ],
+        "canonicalAnswer": "U1 -> U2 -> U2AF -> U5 -> U6",
+        "explanation": "The key exam habit is linking the 5-prime site, branchpoint, 3-prime region, and catalytic handoff into one coherent mechanism instead of memorizing disconnected factor names.",
+        "learningObjective": "Recall the core recognition order of spliceosomal splicing.",
+        "masteryTags": [
+          "splice_mechanism"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/splice-lariat.svg",
+          "alt": "Canonical splicing and lariat formation"
+        },
+        "rewards": {
+          "xp": 45,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s007",
+              "molbio_w26_l13_s010"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_p2",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "multiple_choice",
+        "title": "MODULE 12-13 - FIRST CHEMICAL ATTACK",
+        "desc": "Which feature launches the first transesterification step during canonical spliceosomal splicing?",
+        "bytosTip": "<div class=\"tip\"><b>CHEMISTRY HOOK:</b><br>The first attack uses the branchpoint adenosine. Do not swap the branchpoint with a splice-junction label.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "The 3-prime AG dinucleotide attacks first."
+          },
+          {
+            "id": "b",
+            "label": "The branchpoint adenosine provides the 2-prime OH for the first attack."
+          },
+          {
+            "id": "c",
+            "label": "A DNA polymerase starts the reaction."
+          },
+          {
+            "id": "d",
+            "label": "The mature mRNA cap launches the first attack."
+          }
+        ],
+        "correctChoiceId": "b",
+        "canonicalAnswer": "The branchpoint adenosine provides the 2-prime OH for the first transesterification.",
+        "explanation": "This is the lariat-forming step. The branchpoint A matters because its 2-prime OH attacks the 5-prime splice site, creating the characteristic lariat intermediate.",
+        "learningObjective": "Tie branchpoint recognition to the actual chemistry of lariat formation.",
+        "masteryTags": [
+          "splice_mechanism"
+        ],
+        "rewards": {
+          "xp": 40,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s003",
+              "molbio_w26_l13_s008"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_p3",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "multiple_choice",
+        "title": "MODULE 12-13 - GROUP I VS GROUP II",
+        "desc": "Which comparison best matches the lecture's distinction between Group I and Group II self-splicing introns?",
+        "bytosTip": "<div class=\"tip\"><b>COMPARE MODE:</b><br>External guanosine is the Group I giveaway. Branchpoint A and lariat logic point toward Group II.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "Group I uses an external guanosine, while Group II uses an internal branchpoint adenosine and lariat-like chemistry."
+          },
+          {
+            "id": "b",
+            "label": "Group I and Group II both require U1, U2, U5, and U6 snRNPs in the same way."
+          },
+          {
+            "id": "c",
+            "label": "Group II uses DNA polymerase to remove introns, while Group I edits the chromosome."
+          },
+          {
+            "id": "d",
+            "label": "There is no useful mechanistic distinction between Group I and Group II."
+          }
+        ],
+        "correctChoiceId": "a",
+        "canonicalAnswer": "Group I uses an external guanosine, while Group II uses an internal branchpoint adenosine and lariat-like chemistry.",
+        "explanation": "That comparison is the exam-safe anchor. Group I is remembered through the external guanosine nucleophile, whereas Group II is remembered through branchpoint-A and lariat logic that resembles spliceosomal chemistry.",
+        "learningObjective": "Keep Group I and Group II chemistry distinct.",
+        "masteryTags": [
+          "self_splicing"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/group-introns-comparison.svg",
+          "alt": "Group I versus Group II intron comparison"
+        },
+        "rewards": {
+          "xp": 40,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s011",
+              "molbio_w26_l13_s014"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_p4",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "multiple_choice",
+        "title": "MODULE 12-13 - ALTERNATIVE SPLICING CONSEQUENCE",
+        "desc": "What is the clearest exam-safe consequence of alternative splicing?",
+        "bytosTip": "<div class=\"tip\"><b>DO NOT CONFUSE THIS:</b><br>Alternative splicing changes transcript output. It does not rewrite genomic DNA.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "It permanently edits the gene in the chromosome."
+          },
+          {
+            "id": "b",
+            "label": "It can generate different mature mRNAs and protein isoforms from one gene."
+          },
+          {
+            "id": "c",
+            "label": "It removes the need for the spliceosome."
+          },
+          {
+            "id": "d",
+            "label": "It only matters in fruit flies."
+          }
+        ],
+        "correctChoiceId": "b",
+        "canonicalAnswer": "Alternative splicing can generate different mature mRNAs and protein isoforms from one gene.",
+        "explanation": "The lecture emphasizes that alternative splicing changes RNA output and can alter coding sequence, UTRs, localization, stability, and protein activity without altering the underlying DNA sequence.",
+        "learningObjective": "Separate alternative splicing consequences from DNA-level changes.",
+        "masteryTags": [
+          "alt_splicing",
+          "level_effects"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/alt-splicing-isoforms.svg",
+          "alt": "Alternative splicing isoform panel"
+        },
+        "rewards": {
+          "xp": 35,
+          "rep": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s021",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_mg1",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "minigame",
+        "minigameId": "splice_builder",
+        "title": "SPLICE BUILDER - CANONICAL ROUND",
+        "desc": "Build a canonical splicing outcome from pre-mRNA recognition through exon ligation.",
+        "bytosTip": "<div class=\"tip\"><b>MINIGAME:</b><br>Get the recognition order, branchpoint, and surviving exons all right in one run.</div>",
+        "config": {
+          "variant": "canonical",
+          "prompt": "Create the mature transcript produced by standard spliceosomal removal of the middle intron.",
+          "correctOrder": [
+            "u1",
+            "u2",
+            "u2af",
+            "u5",
+            "u6"
+          ],
+          "branchpointChoice": "branch_a",
+          "availableExons": [
+            "exon1",
+            "exon2"
+          ],
+          "correctExons": [
+            "exon1",
+            "exon2"
+          ]
+        },
+        "canonicalAnswer": "Recognize the splice sites correctly, use the branchpoint A, and keep exon 1 plus exon 2.",
+        "explanation": "Canonical splicing removes the intron, forms a lariat through the branchpoint A, and ligates the flanking exons into the mature mRNA.",
+        "learningObjective": "Integrate splice-site recognition, branchpoint use, and exon ligation in one playable mechanism.",
+        "masteryTags": [
+          "splice_mechanism"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/splice-lariat.svg",
+          "alt": "Canonical splicing and lariat formation"
+        },
+        "rewards": {
+          "xp": 60,
+          "rep": 2,
+          "coins": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s003",
+              "molbio_w26_l13_s007",
+              "molbio_w26_l13_s008"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_mg2",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "minigame",
+        "minigameId": "splice_builder",
+        "title": "SPLICE BUILDER - EXON SKIP ROUND",
+        "desc": "Build an alternative splicing outcome where the middle exon is skipped.",
+        "bytosTip": "<div class=\"tip\"><b>MINIGAME:</b><br>Alternative splicing changes transcript output. Build the isoform, not a DNA mutation.</div>",
+        "config": {
+          "variant": "exon_skip",
+          "prompt": "Produce the exon-skipped isoform that joins exon 1 directly to exon 3.",
+          "correctOrder": [
+            "u1",
+            "u2",
+            "u2af",
+            "u5",
+            "u6"
+          ],
+          "branchpointChoice": "branch_a",
+          "availableExons": [
+            "exon1",
+            "exon2",
+            "exon3"
+          ],
+          "correctExons": [
+            "exon1",
+            "exon3"
+          ]
+        },
+        "canonicalAnswer": "Recognize the splice sites correctly, use the branchpoint A, and keep exon 1 plus exon 3.",
+        "explanation": "Alternative splicing can change the mature RNA by altering exon inclusion. The genome stays the same; the processed transcript changes.",
+        "learningObjective": "Apply splicing logic to an exon-skipping outcome.",
+        "masteryTags": [
+          "alt_splicing",
+          "splice_mechanism"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/alt-splicing-isoforms.svg",
+          "alt": "Alternative splicing isoform panel"
+        },
+        "rewards": {
+          "xp": 65,
+          "rep": 2,
+          "coins": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s004",
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_mg3",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "minigame",
+        "minigameId": "level_sort",
+        "title": "LEVEL CHECK - WHAT CHANGES, EXACTLY?",
+        "desc": "Sort each statement into the biological level it belongs to before exam pressure scrambles them together.",
+        "bytosTip": "<div class=\"tip\"><b>LEVEL CHECK:</b><br>This chapter gets much easier once DNA, processing, transcript output, and protein consequence stop bleeding into each other.</div>",
+        "config": {
+          "categories": [
+            {
+              "id": "dna_level",
+              "label": "DNA level"
+            },
+            {
+              "id": "processing_level",
+              "label": "pre-mRNA processing"
+            },
+            {
+              "id": "transcript_level",
+              "label": "mature transcript output"
+            },
+            {
+              "id": "protein_level",
+              "label": "protein consequence"
+            }
+          ],
+          "items": [
+            {
+              "id": "item1",
+              "prompt": "A promoter mutation changes the sequence present in the gene before transcription begins.",
+              "feedback": "That statement is about the DNA template itself, not RNA processing or transcript output."
+            },
+            {
+              "id": "item2",
+              "prompt": "Exon 2 is skipped during intron removal while the underlying gene sequence stays the same.",
+              "feedback": "That statement is about pre-mRNA processing choices, not a DNA mutation."
+            },
+            {
+              "id": "item3",
+              "prompt": "The mature mRNA now lacks exon 2 and joins exon 1 directly to exon 3.",
+              "feedback": "That statement describes the mature transcript that comes out after processing."
+            },
+            {
+              "id": "item4",
+              "prompt": "The translated protein loses a domain and localizes differently in the cell.",
+              "feedback": "That statement is downstream of RNA processing. It is a protein-level consequence."
+            }
+          ],
+          "correctAssignments": {
+            "item1": "dna_level",
+            "item2": "processing_level",
+            "item3": "transcript_level",
+            "item4": "protein_level"
+          }
+        },
+        "canonicalAnswer": "DNA change vs processing event vs mature transcript output vs protein consequence.",
+        "explanation": "This is the exam habit that saves points. A lot of wrong answers are not fully ignorant, just one level off.",
+        "learningObjective": "Separate DNA-level changes from RNA-processing and protein-output consequences.",
+        "masteryTags": [
+          "level_effects"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/level-of-effect-ladder.svg",
+          "alt": "Level of effect ladder"
+        },
+        "rewards": {
+          "xp": 55,
+          "rep": 2
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s015",
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s021",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m13_mg4",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "minigame",
+        "minigameId": "alternative_splicing",
+        "title": "ALTERNATIVE SPLICING SIMULATOR - ISOFORM BUILD",
+        "desc": "Assemble the isoform that best fits the case, then choose the outcome that matches the lecture logic.",
+        "bytosTip": "<div class=\"tip\"><b>ISOFORM BUILD:</b><br>Do not just name alternative splicing. Build the isoform and tie it to a consequence.</div>",
+        "config": {
+          "prompt": "A regulator biases the transcript toward skipping exon 2. Build the resulting isoform and choose the best study-safe consequence.",
+          "availableExons": [
+            {
+              "id": "exon1",
+              "label": "Exon 1"
+            },
+            {
+              "id": "exon2",
+              "label": "Exon 2"
+            },
+            {
+              "id": "exon3",
+              "label": "Exon 3"
+            }
+          ],
+          "outcomes": [
+            {
+              "id": "same_dna_new_isoform",
+              "label": "Same gene, different mature mRNA/protein isoform"
+            },
+            {
+              "id": "dna_rewritten",
+              "label": "Genomic DNA sequence is rewritten"
+            },
+            {
+              "id": "splicing_not_needed",
+              "label": "Splicing becomes irrelevant"
+            }
+          ],
+          "correctExons": [
+            "exon1",
+            "exon3"
+          ],
+          "correctOutcomeId": "same_dna_new_isoform"
+        },
+        "canonicalAnswer": "Skip exon 2 and predict a new mature mRNA/protein isoform from the same gene.",
+        "explanation": "Alternative splicing is powerful because the same gene can produce different outputs without rewriting the DNA template.",
+        "learningObjective": "Connect exon choice to the resulting isoform and consequence.",
+        "masteryTags": [
+          "alt_splicing",
+          "level_effects"
+        ],
+        "visual": {
+          "imagePath": "assets/study/molbio/alt-splicing-isoforms.svg",
+          "alt": "Alternative splicing isoform panel"
+        },
+        "rewards": {
+          "xp": 65,
+          "rep": 2,
+          "coins": 1
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s021",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m12_chk1",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l12",
+        "mode": "multiple_choice",
+        "title": "CHECKPOINT - PICK THE RIGHT METHOD",
+        "desc": "You want stronger positional confidence about where an RBP contacts RNA. Which method is the best memory-match?",
+        "bytosTip": "<div class=\"tip\"><b>CHECKPOINT ROUND:</b><br>The chapter boss is mixed on purpose. Stay calm and answer at the right level.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "CLIP"
+          },
+          {
+            "id": "b",
+            "label": "A generic transcription assay"
+          },
+          {
+            "id": "c",
+            "label": "DNA sequencing of the chromosome only"
+          },
+          {
+            "id": "d",
+            "label": "No method can answer that question"
+          }
+        ],
+        "correctChoiceId": "a",
+        "canonicalAnswer": "CLIP",
+        "explanation": "This is the method checkpoint: CLIP is the stronger memory hook for positional RNA-binding evidence.",
+        "learningObjective": "Retrieve method-to-purpose mapping under pressure.",
+        "masteryTags": [
+          "methods",
+          "checkpoint"
+        ],
+        "rewards": {
+          "xp": 45,
+          "rep": 2
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l12",
+            "slideRefs": [
+              "molbio_w26_l12_s021",
+              "molbio_w26_l12_s029"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m12_chk2",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "short_answer",
+        "title": "CHECKPOINT - WHAT STARTS THE LARIAT?",
+        "desc": "In one short phrase, what feature begins the first spliceosomal attack that forms the lariat intermediate?",
+        "bytosTip": "<div class=\"tip\"><b>CHECKPOINT ROUND:</b><br>Short answer now. Keep it tight and mechanistic.</div>",
+        "acceptedAnswers": [
+          "branchpoint adenosine",
+          "branch point adenosine",
+          "the branchpoint a",
+          "branchpoint a",
+          "2 prime oh of the branchpoint adenosine",
+          "2 prime oh of branchpoint a"
+        ],
+        "canonicalAnswer": "The branchpoint adenosine provides the nucleophile for the first attack.",
+        "explanation": "The branchpoint adenosine is the lariat anchor. If that is stable in memory, the mechanism stops feeling arbitrary.",
+        "learningObjective": "Recall the core chemistry of lariat formation under pressure.",
+        "masteryTags": [
+          "splice_mechanism",
+          "checkpoint"
+        ],
+        "rewards": {
+          "xp": 50,
+          "rep": 2
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s003",
+              "molbio_w26_l13_s008"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "m12_chk3",
+        "moduleId": "module_12_13",
+        "lectureId": "molbio_w26_l13",
+        "mode": "multiple_choice",
+        "title": "CHECKPOINT - WHAT DID NOT CHANGE?",
+        "desc": "A question describes exon skipping that produces a different isoform. What is the safest thing to say did NOT change?",
+        "bytosTip": "<div class=\"tip\"><b>FINAL CHECKPOINT:</b><br>Last hit. Do not lose the level distinction now.</div>",
+        "choices": [
+          {
+            "id": "a",
+            "label": "The mature mRNA output"
+          },
+          {
+            "id": "b",
+            "label": "The resulting protein isoform"
+          },
+          {
+            "id": "c",
+            "label": "The underlying genomic DNA sequence"
+          },
+          {
+            "id": "d",
+            "label": "The splice pattern itself"
+          }
+        ],
+        "correctChoiceId": "c",
+        "canonicalAnswer": "The underlying genomic DNA sequence did not change.",
+        "explanation": "This is the chapter's core guardrail. Alternative splicing changes RNA output and often protein output, not the gene sequence itself.",
+        "learningObjective": "Hold the DNA-versus-RNA distinction even at the end of the run.",
+        "masteryTags": [
+          "alt_splicing",
+          "level_effects",
+          "checkpoint"
+        ],
+        "rewards": {
+          "xp": 55,
+          "rep": 2
+        },
+        "sourceRefs": [
+          {
+            "lectureId": "molbio_w26_l13",
+            "slideRefs": [
+              "molbio_w26_l13_s017",
+              "molbio_w26_l13_s021",
+              "molbio_w26_l13_s025"
+            ]
+          }
+        ]
+      }
+    ],
+    "completion": {
+      "title": "MIDTERM ARC COMPLETE",
+      "summary": "You cleared the currently authored midterm modules. Review weak spots, then extend the remaining chapter modules.",
+      "bytosLine": "Current campaign slice complete. Additional modules remain scaffolded for future study passes."
+    }
+  }
+}

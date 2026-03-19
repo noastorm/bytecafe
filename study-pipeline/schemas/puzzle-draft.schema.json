@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PuzzleDraft",
+  "type": "object",
+  "required": ["id", "mode", "title", "desc", "learningObjective", "sourceRefs"],
+  "properties": {
+    "id": { "type": "string" },
+    "mode": { "type": "string" },
+    "title": { "type": "string" },
+    "desc": { "type": "string" },
+    "learningObjective": { "type": "string" },
+    "canonicalAnswer": { "type": "string" },
+    "acceptedAnswers": { "type": "array", "items": { "type": "string" } },
+    "sourceRefs": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  }
+}

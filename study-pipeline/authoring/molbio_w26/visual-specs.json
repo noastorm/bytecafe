@@ -1,0 +1,24 @@
+[
+  {
+    "id": "molbio_visual_euk_tx",
+    "sourceSlideRefs": ["molbio_w26_l07:pic-order"],
+    "visualType": "simplified-diagram",
+    "labels": ["promoter", "enhancer", "mediator", "RNA polymerase II", "TFIID", "TFIIH"],
+    "simplifications": [
+      "Remove low-priority protein names that do not matter for the target exam question",
+      "Keep directional relationships and role labels visible"
+    ],
+    "studyPurpose": "Support compare-and-sequence questions about transcription initiation"
+  },
+  {
+    "id": "molbio_visual_rna_processing",
+    "sourceSlideRefs": ["molbio_w26_l14:mrna-capping-and-polyadenylation"],
+    "visualType": "simplified-process-strip",
+    "labels": ["5-prime cap", "exon", "intron", "splicing", "poly(A) tail"],
+    "simplifications": [
+      "Keep only the core process order",
+      "Avoid enzyme-level detail in the runtime visual"
+    ],
+    "studyPurpose": "Support processing-order recall and notes review"
+  }
+]

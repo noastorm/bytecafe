@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified RNA processing diagram</title>
+  <desc id="desc">Pre-mRNA with introns and exons, capping, splicing, cleavage, and polyadenylation.</desc>
+  <rect width="820" height="220" fill="#0c0d13"/>
+  <text x="42" y="34" font-family="Space Grotesk, Arial, sans-serif" font-size="16" fill="#f1e5b6">Pre-mRNA processing: cap, splice, cleave, polyadenylate.</text>
+  <rect x="54" y="108" width="78" height="22" rx="11" fill="#6ed0e5"/>
+  <text x="93" y="123" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="12" fill="#081116">5' CAP</text>
+  <rect x="142" y="108" width="120" height="22" rx="11" fill="#99d39b"/>
+  <rect x="278" y="108" width="92" height="22" rx="11" fill="#d58871"/>
+  <rect x="388" y="108" width="120" height="22" rx="11" fill="#99d39b"/>
+  <rect x="524" y="108" width="92" height="22" rx="11" fill="#d58871"/>
+  <rect x="634" y="108" width="120" height="22" rx="11" fill="#99d39b"/>
+  <text x="202" y="123" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="12" fill="#0b120c">EXON 1</text>
+  <text x="324" y="123" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="12" fill="#170907">INTRON</text>
+  <text x="448" y="123" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="12" fill="#0b120c">EXON 2</text>
+  <text x="570" y="123" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="12" fill="#170907">INTRON</text>
+  <text x="694" y="123" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="12" fill="#0b120c">EXON 3</text>
+  <path d="M324 108 C324 72, 570 72, 570 108" fill="none" stroke="#f1e5b6" stroke-width="4" stroke-dasharray="8 6"/>
+  <text x="448" y="74" text-anchor="middle" font-family="Space Grotesk, Arial, sans-serif" font-size="14" fill="#f1e5b6">splicing removes introns</text>
+  <path d="M754 119 L790 119" fill="none" stroke="#f1e5b6" stroke-width="4"/>
+  <circle cx="796" cy="119" r="3" fill="#f1e5b6"/>
+  <circle cx="804" cy="119" r="3" fill="#f1e5b6"/>
+  <circle cx="812" cy="119" r="3" fill="#f1e5b6"/>
+  <text x="750" y="156" font-family="Space Grotesk, Arial, sans-serif" font-size="13" fill="#f1e5b6">poly(A) tail</text>
+  <text x="90" y="156" font-family="Space Grotesk, Arial, sans-serif" font-size="13" fill="#f1e5b6">capping</text>
+</svg>

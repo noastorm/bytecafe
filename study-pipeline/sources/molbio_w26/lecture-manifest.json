@@ -1,0 +1,30 @@
+{
+  "courseId": "molbio_w26",
+  "title": "Advanced Molecular Biology Winter 2026",
+  "lectures": [
+    {
+      "lectureId": "molbio_w26_outline",
+      "title": "Course outline and topic timeline",
+      "instructor": "Rosonina / Bayfield",
+      "date": "2026-01-06",
+      "sourcePdfPath": "C:/Users/User/Downloads/B3130M.26w.CourseOutline.Rosonina.Bayfield.v2.pdf",
+      "tags": ["course-outline", "demo-source"]
+    },
+    {
+      "lectureId": "molbio_w26_l12",
+      "title": "Lecture 12 - RNA binding proteins",
+      "instructor": "Burke",
+      "date": "2026-02-24",
+      "sourcePdfPath": "C:/Users/User/bytecafe/study-pipeline/sources/molbio_w26/Lecture 12.pdf",
+      "tags": ["lecture-slides", "midterm-2", "rna-binding-proteins", "module-12-13"]
+    },
+    {
+      "lectureId": "molbio_w26_l13",
+      "title": "Lecture 13 - Splicing and alternative splicing",
+      "instructor": "Bayfield",
+      "date": "2026-02-26",
+      "sourcePdfPath": "C:/Users/User/bytecafe/study-pipeline/sources/molbio_w26/Lecture 13 Splicing  Alternative Splicing.pdf",
+      "tags": ["lecture-slides", "midterm-2", "splicing", "alternative-splicing", "module-12-13"]
+    }
+  ]
+}

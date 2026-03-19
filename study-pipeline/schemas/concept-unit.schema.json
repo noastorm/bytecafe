@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ConceptUnit",
+  "type": "object",
+  "required": ["id", "lectureId", "topic", "summary"],
+  "properties": {
+    "id": { "type": "string" },
+    "lectureId": { "type": "string" },
+    "topic": { "type": "string" },
+    "subtopic": { "type": "string" },
+    "summary": { "type": "string" },
+    "terms": { "type": "array", "items": { "type": "string" } },
+    "processSteps": { "type": "array", "items": { "type": "string" } },
+    "misconceptions": { "type": "array", "items": { "type": "string" } },
+    "sourceRefs": { "type": "array", "items": { "type": "string" } }
+  }
+}

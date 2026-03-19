@@ -1,0 +1,29 @@
+{
+  "lectureId": "molbio_w26_l09",
+  "reviewStatus": "reviewed",
+  "lectureSummary": "Mediator and promoter-proximal pausing introduce regulatory control beyond simple recruitment, linking activators and chromatin context to the transcription machinery.",
+  "keyConcepts": [
+    "Mediator bridges regulatory proteins and basal machinery",
+    "Pausing creates a post-initiation checkpoint",
+    "Enhancers and activators influence recruitment and output indirectly"
+  ],
+  "vocabulary": ["Mediator", "pausing", "activator", "enhancer", "promoter-proximal"],
+  "processes": [
+    "Activator input transmitted through Mediator",
+    "Paused polymerase released into productive elongation"
+  ],
+  "compareContrast": [
+    "Recruitment control versus pause-release control"
+  ],
+  "testableFacts": [
+    "Mediator is a bridge/coordinator complex",
+    "Pausing is a regulatory checkpoint rather than a failed initiation event"
+  ],
+  "diagramCandidates": [
+    "Mediator bridge diagram"
+  ],
+  "misconceptions": [
+    "Confusing TFIIH with Mediator",
+    "Assuming all regulation occurs only before initiation"
+  ]
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">RIP versus CLIP comparison</title>
+  <desc id="desc">Study graphic comparing RIP and CLIP by what interactions survive and what evidence each method provides.</desc>
+  <rect width="960" height="520" rx="26" fill="#08110f"/>
+  <rect x="24" y="24" width="912" height="472" rx="22" fill="#0d1b18" stroke="#2e5f56"/>
+  <text x="60" y="74" fill="#d8fff5" font-size="34" font-family="Verdana, Arial, sans-serif">RIP vs CLIP</text>
+  <text x="60" y="108" fill="#7fd6c4" font-size="18" font-family="Verdana, Arial, sans-serif">Lecture 12 methods memory hook: what survives vs what is preserved</text>
+
+  <rect x="54" y="142" width="390" height="300" rx="18" fill="#102522" stroke="#4f978b"/>
+  <rect x="516" y="142" width="390" height="300" rx="18" fill="#12201d" stroke="#7fd6c4"/>
+  <text x="84" y="184" fill="#d8fff5" font-size="28" font-family="Verdana, Arial, sans-serif">RIP</text>
+  <text x="546" y="184" fill="#d8fff5" font-size="28" font-family="Verdana, Arial, sans-serif">CLIP</text>
+
+  <text x="84" y="222" fill="#7fd6c4" font-size="17" font-family="Verdana, Arial, sans-serif">Starts with complexes that remain associated</text>
+  <text x="546" y="222" fill="#7fd6c4" font-size="17" font-family="Verdana, Arial, sans-serif">Uses crosslinking before purification</text>
+
+  <g font-family="Verdana, Arial, sans-serif" font-size="16" fill="#d8fff5">
+    <text x="84" y="266">• Stable interactions are easiest to recover</text>
+    <text x="84" y="298">• Fragile interactions can disappear during handling</text>
+    <text x="84" y="330">• Good for associated RNA targets</text>
+    <text x="84" y="362">• Weaker for exact binding-position confidence</text>
+
+    <text x="546" y="266">• Preserves direct contact before lysis</text>
+    <text x="546" y="298">• Fragile interactions are less likely to vanish</text>
+    <text x="546" y="330">• Better for site-level binding evidence</text>
+    <text x="546" y="362">• Stronger positional confidence after crosslinking</text>
+  </g>
+
+  <g>
+    <rect x="84" y="390" width="126" height="28" rx="14" fill="#24413d"/>
+    <text x="103" y="409" fill="#d8fff5" font-size="14" font-family="Verdana, Arial, sans-serif">what stays</text>
+    <rect x="546" y="390" width="160" height="28" rx="14" fill="#27534c"/>
+    <text x="566" y="409" fill="#d8fff5" font-size="14" font-family="Verdana, Arial, sans-serif">what was there</text>
+  </g>
+
+  <path d="M252 278 C290 246, 326 246, 364 278" fill="none" stroke="#7fd6c4" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="250" cy="282" r="18" fill="#7fd6c4"/>
+  <circle cx="366" cy="282" r="18" fill="#7fd6c4"/>
+  <rect x="274" y="252" width="68" height="58" rx="12" fill="#d8fff5" opacity="0.92"/>
+
+  <path d="M714 278 C752 246, 788 246, 826 278" fill="none" stroke="#7fd6c4" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="712" cy="282" r="18" fill="#7fd6c4"/>
+  <circle cx="828" cy="282" r="18" fill="#7fd6c4"/>
+  <rect x="736" y="252" width="68" height="58" rx="12" fill="#d8fff5" opacity="0.92"/>
+  <line x1="748" y1="266" x2="790" y2="296" stroke="#0d1b18" stroke-width="4"/>
+  <line x1="790" y1="266" x2="748" y2="296" stroke="#0d1b18" stroke-width="4"/>
+
+  <text x="60" y="474" fill="#7fd6c4" font-size="16" font-family="Verdana, Arial, sans-serif">Exam-safe shortcut: RIP asks who stayed associated; CLIP better preserves where contact existed.</text>
+</svg>

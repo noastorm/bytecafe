@@ -1,0 +1,32 @@
+[
+  {
+    "id": "molbio_l07_p2",
+    "mode": "sequence",
+    "title": "Lecture 7 - Pre-initiation complex order",
+    "desc": "Build the usual simplified order for eukaryotic pre-initiation complex assembly.",
+    "learningObjective": "Recall the simplified sequence of pre-initiation complex assembly.",
+    "canonicalAnswer": "TFIID -> TFIIB -> Pol II/TFIIF -> TFIIE -> TFIIH",
+    "acceptedAnswers": [],
+    "sourceRefs": [
+      {
+        "lectureId": "molbio_w26_l07",
+        "slideRefs": ["pic-order"]
+      }
+    ]
+  },
+  {
+    "id": "molbio_l14_p1",
+    "mode": "sequence",
+    "title": "Lecture 14 - Pre-mRNA processing flow",
+    "desc": "Order these major pre-mRNA processing events in the usual study-friendly sequence.",
+    "learningObjective": "Recall the core sequence of pre-mRNA processing events.",
+    "canonicalAnswer": "5-prime capping -> splicing -> 3-prime cleavage -> polyadenylation",
+    "acceptedAnswers": [],
+    "sourceRefs": [
+      {
+        "lectureId": "molbio_w26_l14",
+        "slideRefs": ["mrna-capping-and-polyadenylation"]
+      }
+    ]
+  }
+]

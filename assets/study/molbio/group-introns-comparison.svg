@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Group I versus Group II introns</title>
+  <desc id="desc">Comparison of Group I self-splicing introns using external guanosine and Group II introns using branchpoint adenosine and lariat-like chemistry.</desc>
+  <rect width="960" height="520" rx="26" fill="#08110f"/>
+  <rect x="24" y="24" width="912" height="472" rx="22" fill="#0d1b18" stroke="#2e5f56"/>
+  <text x="60" y="74" fill="#d8fff5" font-size="34" font-family="Verdana, Arial, sans-serif">Group I vs Group II Introns</text>
+  <text x="60" y="108" fill="#7fd6c4" font-size="18" font-family="Verdana, Arial, sans-serif">Same outcome theme, different catalytic logic</text>
+
+  <rect x="56" y="146" width="392" height="286" rx="20" fill="#102522" stroke="#4f978b"/>
+  <rect x="512" y="146" width="392" height="286" rx="20" fill="#12201d" stroke="#7fd6c4"/>
+  <text x="88" y="186" fill="#d8fff5" font-size="30" font-family="Verdana, Arial, sans-serif">Group I</text>
+  <text x="544" y="186" fill="#d8fff5" font-size="30" font-family="Verdana, Arial, sans-serif">Group II</text>
+
+  <g font-family="Verdana, Arial, sans-serif" font-size="17" fill="#d8fff5">
+    <text x="88" y="228">• Self-splicing RNA</text>
+    <text x="88" y="258">• First attack uses free GTP</text>
+    <text x="88" y="288">• External guanosine is the giveaway</text>
+    <text x="88" y="318">• No branchpoint lariat first step</text>
+
+    <text x="544" y="228">• Self-splicing RNA</text>
+    <text x="544" y="258">• Uses internal branchpoint adenosine</text>
+    <text x="544" y="288">• Forms lariat-like intermediate</text>
+    <text x="544" y="318">• Mechanistically resembles spliceosome</text>
+  </g>
+
+  <circle cx="178" cy="360" r="24" fill="#f5c96c"/>
+  <text x="153" y="366" fill="#07201c" font-size="18" font-family="Verdana, Arial, sans-serif">GTP</text>
+  <path d="M206 360 H316" stroke="#f5c96c" stroke-width="8" stroke-linecap="round"/>
+  <rect x="316" y="332" width="88" height="56" rx="14" fill="#d8fff5"/>
+  <text x="338" y="366" fill="#08110f" font-size="18" font-family="Verdana, Arial, sans-serif">intron</text>
+
+  <circle cx="634" cy="360" r="24" fill="#ff9678"/>
+  <text x="626" y="366" fill="#08110f" font-size="18" font-family="Verdana, Arial, sans-serif">A</text>
+  <path d="M658 360 C708 320, 784 320, 836 360 C796 414, 700 414, 658 360 Z" fill="#102522" stroke="#ff9678" stroke-width="5"/>
+  <text x="714" y="366" fill="#d8fff5" font-size="20" font-family="Verdana, Arial, sans-serif">lariat</text>
+
+  <text x="60" y="476" fill="#7fd6c4" font-size="17" font-family="Verdana, Arial, sans-serif">Exam shortcut: Group I = external GTP. Group II = branchpoint A + lariat-like chemistry.</text>
+</svg>

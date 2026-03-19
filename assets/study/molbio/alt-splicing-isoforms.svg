@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" role="img" aria-labelledby="title desc">
+  <title id="title">Alternative splicing isoforms</title>
+  <desc id="desc">Diagram showing one gene producing multiple mature mRNA isoforms through exon inclusion choices and different outcomes.</desc>
+  <rect width="960" height="520" rx="26" fill="#08110f"/>
+  <rect x="24" y="24" width="912" height="472" rx="22" fill="#0d1b18" stroke="#2e5f56"/>
+  <text x="60" y="74" fill="#d8fff5" font-size="34" font-family="Verdana, Arial, sans-serif">Alternative Splicing</text>
+  <text x="60" y="108" fill="#7fd6c4" font-size="18" font-family="Verdana, Arial, sans-serif">One gene, multiple mature mRNAs, different outputs</text>
+
+  <text x="86" y="168" fill="#d8fff5" font-size="22" font-family="Verdana, Arial, sans-serif">pre-mRNA</text>
+  <rect x="86" y="192" width="110" height="48" rx="14" fill="#7fd6c4"/>
+  <rect x="232" y="192" width="110" height="48" rx="14" fill="#f5c96c"/>
+  <rect x="378" y="192" width="110" height="48" rx="14" fill="#7fd6c4"/>
+  <text x="120" y="222" fill="#07201c" font-size="20" font-family="Verdana, Arial, sans-serif">Exon 1</text>
+  <text x="266" y="222" fill="#07201c" font-size="20" font-family="Verdana, Arial, sans-serif">Exon 2</text>
+  <text x="412" y="222" fill="#07201c" font-size="20" font-family="Verdana, Arial, sans-serif">Exon 3</text>
+  <line x1="196" y1="216" x2="232" y2="216" stroke="#d8fff5" stroke-width="8" stroke-linecap="round"/>
+  <line x1="342" y1="216" x2="378" y2="216" stroke="#d8fff5" stroke-width="8" stroke-linecap="round"/>
+
+  <path d="M288 248 C288 300, 288 300, 288 338" stroke="#f5c96c" stroke-width="5" stroke-dasharray="8 8" fill="none"/>
+  <path d="M142 248 C156 294, 198 318, 432 338" stroke="#7fd6c4" stroke-width="5" fill="none"/>
+  <path d="M432 338 C472 326, 528 298, 556 254" stroke="#7fd6c4" stroke-width="5" fill="none"/>
+  <path d="M142 248 C160 344, 278 396, 556 396" stroke="#f5c96c" stroke-width="5" fill="none"/>
+
+  <text x="596" y="188" fill="#d8fff5" font-size="22" font-family="Verdana, Arial, sans-serif">Isoform A</text>
+  <rect x="596" y="202" width="100" height="44" rx="12" fill="#7fd6c4"/>
+  <rect x="724" y="202" width="100" height="44" rx="12" fill="#f5c96c"/>
+  <rect x="852" y="202" width="56" height="44" rx="12" fill="#7fd6c4"/>
+  <text x="628" y="230" fill="#07201c" font-size="18" font-family="Verdana, Arial, sans-serif">1</text>
+  <text x="756" y="230" fill="#07201c" font-size="18" font-family="Verdana, Arial, sans-serif">2</text>
+  <text x="874" y="230" fill="#07201c" font-size="18" font-family="Verdana, Arial, sans-serif">3</text>
+  <text x="596" y="272" fill="#7fd6c4" font-size="16" font-family="Verdana, Arial, sans-serif">could change coding sequence, domain content, or activity</text>
+
+  <text x="596" y="358" fill="#d8fff5" font-size="22" font-family="Verdana, Arial, sans-serif">Isoform B</text>
+  <rect x="596" y="372" width="100" height="44" rx="12" fill="#7fd6c4"/>
+  <rect x="852" y="372" width="56" height="44" rx="12" fill="#7fd6c4"/>
+  <text x="628" y="400" fill="#07201c" font-size="18" font-family="Verdana, Arial, sans-serif">1</text>
+  <text x="874" y="400" fill="#07201c" font-size="18" font-family="Verdana, Arial, sans-serif">3</text>
+  <text x="596" y="442" fill="#7fd6c4" font-size="16" font-family="Verdana, Arial, sans-serif">same DNA, different mature mRNA and often different protein outcome</text>
+</svg>

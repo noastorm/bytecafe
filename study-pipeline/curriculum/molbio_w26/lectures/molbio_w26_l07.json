@@ -1,0 +1,33 @@
+{
+  "lectureId": "molbio_w26_l07",
+  "reviewStatus": "reviewed",
+  "lectureSummary": "Eukaryotic transcription centers on RNA polymerase II, promoter recognition by general transcription factors, and ordered assembly of a pre-initiation complex rather than bacterial sigma-factor logic.",
+  "keyConcepts": [
+    "RNA polymerase II makes pre-mRNA",
+    "TFIID/TBP helps nucleate promoter recognition",
+    "TFIIH contributes helicase and kinase activity",
+    "Pre-initiation complex assembly can be remembered in a simplified order"
+  ],
+  "vocabulary": ["RNA polymerase II", "TFIID", "TBP", "TFIIB", "TFIIH", "pre-initiation complex"],
+  "processes": [
+    "TFIID/TBP promoter binding",
+    "TFIIB stabilization",
+    "Pol II and TFIIF recruitment",
+    "TFIIE and TFIIH entry"
+  ],
+  "compareContrast": [
+    "Bacterial sigma-factor promoter recognition versus eukaryotic general transcription factor assembly"
+  ],
+  "testableFacts": [
+    "RNA polymerase II synthesizes pre-mRNA",
+    "TFIIH is not the same thing as Mediator"
+  ],
+  "diagramCandidates": [
+    "Simplified promoter-enhancer-mediator-Pol II map",
+    "Ordered PIC assembly strip"
+  ],
+  "misconceptions": [
+    "Confusing polymerase identity",
+    "Treating Mediator as an enzymatic initiation factor"
+  ]
+}
