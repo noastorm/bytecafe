@@ -843,7 +843,12 @@ function evalR(code) {
   }
 
   // Function definition
-  if (/function\s*\(/.test(trimmed) && trimmed.includes('<-')) return null;
+  if (/function\s*\(/.test(trimmed) && trimmed.includes('<-')) {
+    // If a function call follows the closing brace on the same line, evaluate that part too
+    const afterDef = trimmed.match(/\}+\s*([a-zA-Z_][a-zA-Z0-9_]*\s*\(.+\))\s*$/);
+    if (afterDef) return evalR(afterDef[1]);
+    return null;
+  }
 
   // Function call maxi
   if (/^maxi\s*\(7\s*,\s*12\)/.test(trimmed)) return '[1] 12';
