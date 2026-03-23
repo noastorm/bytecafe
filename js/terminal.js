@@ -1246,6 +1246,22 @@ function showAllComplete() {
   appendOutput('r-result hint', '  [Switch to STORY - there is one more thing]');
 }
 
+// Paste handler: split multi-line pasted code and submit each line
+document.addEventListener('paste', function(e) {
+  const inp = document.getElementById('r-input');
+  if (document.activeElement !== inp) return;
+  const text = (e.clipboardData || window.clipboardData).getData('text');
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(l => l);
+  if (lines.length <= 1) return; // let default paste handle single-line
+  e.preventDefault();
+  lines.forEach((line, i) => {
+    setTimeout(() => {
+      inp.value = line;
+      runCode();
+    }, i * 80);
+  });
+});
+
 // Keyboard history
 document.addEventListener('keydown', function(e) {
   const inp = document.getElementById('r-input');
